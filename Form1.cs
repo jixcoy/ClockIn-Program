@@ -16,5 +16,19 @@ namespace ClockIn
         {
             InitializeComponent();
         }
+
+        private void logInBtn_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "69")
+            {
+                WorkerForm worker = new WorkerForm();
+                this.Hide();
+                worker.ShowDialog();
+                this.Close();
+            } else
+            {
+
+            }
+        }
     }
 }
