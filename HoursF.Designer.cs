@@ -1,7 +1,7 @@
 ﻿
 namespace ClockIn
 {
-    partial class FEmployeeProfile
+    partial class HoursF
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,14 +31,13 @@ namespace ClockIn
         {
             this.SuspendLayout();
             // 
-            // FEmployeeProfile
+            // HoursF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Name = "FEmployeeProfile";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Name = "HoursF";
             this.Size = new System.Drawing.Size(681, 461);
-            this.Load += new System.EventHandler(this.FEmployeeProfile_Load);
             this.ResumeLayout(false);
 
         }
