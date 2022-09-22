@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomButton.cs" />
     <Compile Include="EmailF.cs">
       <SubType>UserControl</SubType>
     </Compile>
