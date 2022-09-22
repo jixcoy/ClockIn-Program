@@ -10,20 +10,14 @@ using System.Windows.Forms;
 
 namespace ClockIn
 {
-    public partial class WorkerForm : Form
+    public partial class FEmployeeProfile : UserControl
     {
-        public WorkerForm()
+        public FEmployeeProfile()
         {
             InitializeComponent();
-            workerLeftPanel.Controls.SetChildIndex(clockInLabel, 5);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void FEmployeeProfile_Load(object sender, EventArgs e)
         {
 
         }

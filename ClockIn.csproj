@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FEmployeeProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FEmployeeProfile.Designer.cs">
+      <DependentUpon>FEmployeeProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="WorkerForm.Designer.cs">
       <DependentUpon>WorkerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FEmployeeProfile.resx">
+      <DependentUpon>FEmployeeProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

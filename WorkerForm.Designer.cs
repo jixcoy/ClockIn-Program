@@ -136,6 +136,8 @@ namespace ClockIn
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.workerLeftPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "WorkerForm";
             this.Text = "WorkerForm";
             this.workerLeftPanel.ResumeLayout(false);
