@@ -16,5 +16,15 @@ namespace ClockIn
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
