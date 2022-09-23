@@ -33,11 +33,12 @@ namespace ClockIn
             // 
             // FEmployeeProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Gray;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FEmployeeProfile";
-            this.Size = new System.Drawing.Size(681, 461);
+            this.Size = new System.Drawing.Size(908, 567);
             this.Load += new System.EventHandler(this.FEmployeeProfile_Load);
             this.ResumeLayout(false);
 
