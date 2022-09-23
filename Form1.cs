@@ -15,6 +15,8 @@ namespace ClockIn
         public Form1()
         {
             InitializeComponent();
+            FormManager.form1 = this;
+            FormManager.wform = new WorkerForm();
         }
 
         private void logInBtn_Click(object sender, EventArgs e)
@@ -29,6 +31,11 @@ namespace ClockIn
             {
 
             }
+        }
+
+        private void iconStartButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

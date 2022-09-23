@@ -78,6 +78,7 @@
             this.iconStartButton.Size = new System.Drawing.Size(884, 461);
             this.iconStartButton.TabIndex = 0;
             this.iconStartButton.UseVisualStyleBackColor = false;
+            this.iconStartButton.Click += new System.EventHandler(this.iconStartButton_Click);
             // 
             // logInBtn
             // 

@@ -27,7 +27,9 @@ namespace ClockIn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            FormManager.form1.Show();
+            FormManager.wform.Hide();
+            FormManager.wform.Close();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
