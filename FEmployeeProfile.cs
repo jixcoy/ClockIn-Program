@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClockIn
 {
     public partial class FEmployeeProfile : UserControl
     {
+        List<Employee> employee = new List<Employee>();
         public FEmployeeProfile()
         {
             InitializeComponent();
+        }
+        private void LoadHoursDB()
+        {
+            employee = DBAccess.LoadEmployees();
+        }
+
+        private void SetData()
+        {
+
         }
 
         private void FEmployeeProfile_Load(object sender, EventArgs e)
@@ -28,6 +32,11 @@ namespace ClockIn
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HoursTable_Paint(object sender, PaintEventArgs e)
         {
 
         }

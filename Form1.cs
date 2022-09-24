@@ -16,12 +16,14 @@ namespace ClockIn
         {
             InitializeComponent();
             FormManager.form1 = this;
-            FormManager.wform = new WorkerForm();
-        }
 
+        }
+        public string logInTb;
         private void logInBtn_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "69")
+            
+            logInTb = textBox1.Text;
+            if (logInTb == "69")
             {
                 WorkerForm worker = new WorkerForm();
                 this.Hide();
@@ -34,6 +36,11 @@ namespace ClockIn
         }
 
         private void iconStartButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

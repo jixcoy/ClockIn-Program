@@ -12,15 +12,22 @@ namespace ClockIn
     {
         public static List<Employee> LoadEmployees()
         {
+            Form1 f = new Form1();
+            string id = f.logInTb;
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<Employee>("Select * from employee", new DynamicParameters());
+                
+                var output = cnn.Query<Employee>($"Select * from Hours", new DynamicParameters());
                 return output.ToList();
             }
         }
+        // Use this function in boss to make emp
         public static void SaveEmployee(Employee emp)
         {
-
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                
+            }
         }
 
         private static string LoadConnectionString(string id = "Default")

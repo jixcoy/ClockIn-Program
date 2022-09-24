@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace ClockIn
 {
     public partial class WorkerForm : Form
     {
+
         public WorkerForm()
         {
             InitializeComponent();
+            FormManager.wform = this;
             workerLeftPanel.Controls.SetChildIndex(clockInLabel, 5);
         }
 
@@ -27,9 +30,10 @@ namespace ClockIn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormManager.form1.Show();
-            FormManager.wform.Hide();
-            FormManager.wform.Close();
+            // Log Out no work
+            //this.Hide();
+            //FormManager.form1.Show();
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
