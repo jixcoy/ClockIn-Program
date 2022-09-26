@@ -6,14 +6,26 @@ namespace ClockIn
 {
     public partial class FEmployeeProfile : UserControl
     {
-        List<Employee> employee = new List<Employee>();
+        List<Employee> employeeList = new List<Employee>();
+        //private string ID = Form1.form
         public FEmployeeProfile()
         {
             InitializeComponent();
         }
         private void LoadHoursDB()
         {
-            employee = DBAccess.LoadEmployees();
+            employeeList = DBAccess.LoadEmployees();
+            //Get Specific employee
+            if (Form1.logInTb == employeeList[0].Id.ToString())
+            {
+                UserNameLabel.Text = employeeList[0].Name;
+                HoursValue.Text = employeeList[0].Hours;
+                DateValue.Text = employeeList[0].Date;
+            }
+
+
+            //UserNameLabel.Text = employee[].Name;
+            //HoursHead.Text = employee[0].Name;
         }
 
         private void SetData()
@@ -23,7 +35,7 @@ namespace ClockIn
 
         private void FEmployeeProfile_Load(object sender, EventArgs e)
         {
-
+            LoadHoursDB();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
