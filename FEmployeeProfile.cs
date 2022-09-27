@@ -22,10 +22,10 @@ namespace ClockIn
 
                 if (Form1.logInTb == employee.Id.ToString())
                 {
-                    UserNameLabel.Text = employeeList[0].Name;
-                    HoursValue.Text = employeeList[0].Hours;
-                    DateValue.Text = employeeList[0].Date;
-                    RoleLabel.Text = employeeList[0].Role;
+                    UserNameLabel.Text = employee.Name;
+                    HoursValue.Text = employee.Hours;
+                    DateValue.Text = employee.Date;
+                    RoleLabel.Text = employee.Role;
                 }
             }
 

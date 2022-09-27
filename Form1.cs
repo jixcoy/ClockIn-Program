@@ -17,26 +17,22 @@ namespace ClockIn
         {
             InitializeComponent();
             FormManager.form1 = this;
-            
-
         }
         public static string logInTb;
         private void logInBtn_Click(object sender, EventArgs e)
         {
             employees = DBAccess.LoadEmployees();
             logInTb = textBox1.Text;
-
             foreach (var employee in employees)
             {
                 if (logInTb == employee.Id.ToString())
                 {
-                    WorkerForm worker = new WorkerForm(logInTb);
+                    WorkerForm worker = new WorkerForm();
                     this.Hide();
                     worker.ShowDialog();
                 }
             }
         }
-
         private void iconStartButton_Click(object sender, EventArgs e)
         {
 

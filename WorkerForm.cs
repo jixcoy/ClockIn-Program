@@ -5,12 +5,10 @@ namespace ClockIn
 {
     public partial class WorkerForm : Form
     {
-        public string ID { get; set; }
-        public WorkerForm(string id)
+        public WorkerForm()
         {
             InitializeComponent();
             FormManager.wform = this;
-            ID = id;
             workerLeftPanel.Controls.SetChildIndex(clockInLabel, 5);
         }
 
