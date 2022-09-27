@@ -12,5 +12,6 @@ namespace ClockIn
         public string Name { get; set; }
         public string Date { get; set; }
         public string Hours { get; set; }
+        public string Role { get; set; }
     }
 }

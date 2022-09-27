@@ -156,7 +156,7 @@ namespace ClockIn
             // fEmployeeProfile1
             // 
             this.fEmployeeProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.fEmployeeProfile1.Location = new System.Drawing.Point(198, 1);
+            this.fEmployeeProfile1.Location = new System.Drawing.Point(198, 0);
             this.fEmployeeProfile1.Margin = new System.Windows.Forms.Padding(4);
             this.fEmployeeProfile1.Name = "fEmployeeProfile1";
             this.fEmployeeProfile1.Size = new System.Drawing.Size(688, 461);

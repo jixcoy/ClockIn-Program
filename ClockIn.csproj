@@ -73,14 +73,14 @@
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DBAccess.cs" />
+    <Compile Include="CLasses\DBAccess.cs" />
     <Compile Include="EmailF.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="EmailF.Designer.cs">
       <DependentUpon>EmailF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs" />
+    <Compile Include="CLasses\Employee.cs" />
     <Compile Include="FEmployeeProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>

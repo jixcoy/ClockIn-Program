@@ -21,6 +21,7 @@ namespace ClockIn
                 UserNameLabel.Text = employeeList[0].Name;
                 HoursValue.Text = employeeList[0].Hours;
                 DateValue.Text = employeeList[0].Date;
+                RoleLabel.Text = employeeList[0].Role;
             }
 
 
