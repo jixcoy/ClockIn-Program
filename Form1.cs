@@ -32,6 +32,12 @@ namespace ClockIn
                     worker.ShowDialog();
                 }
             }
+            if (logInTb == "boss")
+            {
+                BossForm boss = new BossForm();
+                this.Hide();
+                boss.ShowDialog();
+            }
         }
         private void iconStartButton_Click(object sender, EventArgs e)
         {

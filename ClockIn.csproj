@@ -70,11 +70,35 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boss\BossForm.cs">
+    <Compile Include="BossEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BossEmail.Designer.cs">
+      <DependentUpon>BossEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BossForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boss\BossForm.Designer.cs">
+    <Compile Include="BossForm.Designer.cs">
       <DependentUpon>BossForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BossManageEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BossManageEmployees.Designer.cs">
+      <DependentUpon>BossManageEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BossManageSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BossManageSchedule.Designer.cs">
+      <DependentUpon>BossManageSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BossProfiel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BossProfiel.Designer.cs">
+      <DependentUpon>BossProfiel.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
@@ -114,6 +138,21 @@
     <Compile Include="WorkerForm.Designer.cs">
       <DependentUpon>WorkerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BossEmail.resx">
+      <DependentUpon>BossEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BossForm.resx">
+      <DependentUpon>BossForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BossManageEmployees.resx">
+      <DependentUpon>BossManageEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BossManageSchedule.resx">
+      <DependentUpon>BossManageSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BossProfiel.resx">
+      <DependentUpon>BossProfiel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmailF.resx">
       <DependentUpon>EmailF.cs</DependentUpon>
     </EmbeddedResource>
