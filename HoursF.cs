@@ -13,7 +13,21 @@ namespace ClockIn
         public HoursF()
         {
             InitializeComponent();
-            employees = DBAccess.LoadEmployees();
+            try
+            {
+                employees = DBAccess.LoadEmployees();
+            }
+            catch(Exception exc)
+            {
+                Employee newEmployee = new Employee();
+                newEmployee.Name = "john";
+                newEmployee.Id = 1234;
+                newEmployee.Shift = "first";
+                newEmployee.Date = "12/10/2003";
+                newEmployee.Hours = "4";
+                newEmployee.Role = "employee";
+                employees.Add(newEmployee);
+            }
         }
 
         private void HoursF_Load(object sender, EventArgs e)
