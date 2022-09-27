@@ -31,11 +31,15 @@ namespace ClockIn
         {
             this.TitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ListBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Shift = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShiftDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleLabel
@@ -59,23 +63,15 @@ namespace ClockIn
             this.panel1.Size = new System.Drawing.Size(681, 100);
             this.panel1.TabIndex = 1;
             // 
-            // ListBox1
-            // 
-            this.ListBox1.FormattingEnabled = true;
-            this.ListBox1.Location = new System.Drawing.Point(25, 126);
-            this.ListBox1.Name = "ListBox1";
-            this.ListBox1.Size = new System.Drawing.Size(311, 199);
-            this.ListBox1.TabIndex = 1;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Hours,
             this.Date});
-            this.dataGridView1.Location = new System.Drawing.Point(390, 254);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 135);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(246, 161);
+            this.dataGridView1.Size = new System.Drawing.Size(242, 221);
             this.dataGridView1.TabIndex = 2;
             // 
             // Hours
@@ -88,19 +84,41 @@ namespace ClockIn
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Shift,
+            this.ShiftDate});
+            this.dataGridView2.Location = new System.Drawing.Point(389, 135);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 221);
+            this.dataGridView2.TabIndex = 3;
+            // 
+            // Shift
+            // 
+            this.Shift.HeaderText = "Shift";
+            this.Shift.Name = "Shift";
+            // 
+            // ShiftDate
+            // 
+            this.ShiftDate.HeaderText = "Date";
+            this.ShiftDate.Name = "ShiftDate";
+            // 
             // HoursF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.ListBox1);
             this.Controls.Add(this.panel1);
             this.Name = "HoursF";
             this.Size = new System.Drawing.Size(681, 461);
             this.Load += new System.EventHandler(this.HoursF_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,9 +127,11 @@ namespace ClockIn
 
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox ListBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hours;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shift;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShiftDate;
     }
 }

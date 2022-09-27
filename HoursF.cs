@@ -20,7 +20,6 @@ namespace ClockIn
         {
             foreach(var employee in employees)
             {
-                int i = 0;
                 if (Form1.logInTb == employee.Id.ToString())
                 {
                     DataGridViewRow dr = new DataGridViewRow();
@@ -28,6 +27,12 @@ namespace ClockIn
                     dr.Cells[0].Value = employee.Hours;
                     dr.Cells[1].Value = employee.Date;
                     dataGridView1.Rows.Add(dr);
+
+                    DataGridViewRow dr2 = new DataGridViewRow();
+                    dr2.CreateCells(dataGridView2);
+                    dr2.Cells[0].Value = employee.Shift;
+                    dr2.Cells[1].Value = employee.Date;
+                    dataGridView2.Rows.Add(dr2);
                 }
             }
         }
