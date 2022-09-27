@@ -16,12 +16,17 @@ namespace ClockIn
         {
             employeeList = DBAccess.LoadEmployees();
             //Get Specific employee
-            if (Form1.logInTb == employeeList[0].Id.ToString())
+            // 
+            foreach (var employee in employeeList)
             {
-                UserNameLabel.Text = employeeList[0].Name;
-                HoursValue.Text = employeeList[0].Hours;
-                DateValue.Text = employeeList[0].Date;
-                RoleLabel.Text = employeeList[0].Role;
+
+                if (Form1.logInTb == employee.Id.ToString())
+                {
+                    UserNameLabel.Text = employeeList[0].Name;
+                    HoursValue.Text = employeeList[0].Hours;
+                    DateValue.Text = employeeList[0].Date;
+                    RoleLabel.Text = employeeList[0].Role;
+                }
             }
 
 

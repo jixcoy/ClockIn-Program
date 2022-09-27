@@ -23,16 +23,17 @@ namespace ClockIn
         public static string logInTb;
         private void logInBtn_Click(object sender, EventArgs e)
         {
-            
+            employees = DBAccess.LoadEmployees();
             logInTb = textBox1.Text;
-            if (logInTb == "6969")
-            {
-                WorkerForm worker = new WorkerForm(logInTb);
-                this.Hide();
-                worker.ShowDialog();
-            } else
-            {
 
+            foreach (var employee in employees)
+            {
+                if (logInTb == employee.Id.ToString())
+                {
+                    WorkerForm worker = new WorkerForm(logInTb);
+                    this.Hide();
+                    worker.ShowDialog();
+                }
             }
         }
 
