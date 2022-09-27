@@ -21,33 +21,44 @@ namespace ClockIn
         }
         private void hideAllUserControls()
         {
-            //fEmployeeProfile1.Hide();
-            //emailF1.Hide();
-            //hoursF1.Hide();
+            bossProfiel1.Hide();
+            bossEmail1.Hide();
+            bossManageSchedule1.Hide();
+            bossManageEmployees1.Hide();
         }
         private void profileIconButton_Click(object sender, EventArgs e)
         {
-
+            hideAllUserControls();
+            bossProfiel1.Show();
         }
 
         private void emailIconBtn_Click(object sender, EventArgs e)
         {
-
+            hideAllUserControls();
+            bossEmail1.Show();
         }
 
-        private void hoursIconBtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-
+            // LOG OUT
         }
 
         private void ManageScheduleBtn_Click(object sender, EventArgs e)
         {
+            hideAllUserControls();
+            bossManageSchedule1.Show();
+        }
 
+        private void BossForm_Load(object sender, EventArgs e)
+        {
+            bossProfiel1.Show();
+        }
+
+        private void ManageEmployeesBtn_Click(object sender, EventArgs e)
+        {
+            hideAllUserControls();
+            bossManageEmployees1.Show();
         }
     }
 }

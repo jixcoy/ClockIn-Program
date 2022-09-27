@@ -38,8 +38,13 @@ namespace ClockIn
             this.emailIconBtn = new FontAwesome.Sharp.IconButton();
             this.profileIconButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bossEmail1 = new ClockIn.BossEmail();
+            this.bossProfiel1 = new ClockIn.BossProfiel();
+            this.bossManageSchedule1 = new ClockIn.BossManageSchedule();
+            this.bossManageEmployees1 = new ClockIn.BossManageEmployees();
             this.panel1.SuspendLayout();
             this.workerLeftPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -144,7 +149,7 @@ namespace ClockIn
             this.ManageEmployeesBtn.Text = "Manage Employees";
             this.ManageEmployeesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ManageEmployeesBtn.UseVisualStyleBackColor = false;
-            this.ManageEmployeesBtn.Click += new System.EventHandler(this.hoursIconBtn_Click);
+            this.ManageEmployeesBtn.Click += new System.EventHandler(this.ManageEmployeesBtn_Click);
             // 
             // emailIconBtn
             // 
@@ -194,11 +199,48 @@ namespace ClockIn
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.bossManageEmployees1);
+            this.panel2.Controls.Add(this.bossManageSchedule1);
+            this.panel2.Controls.Add(this.bossProfiel1);
+            this.panel2.Controls.Add(this.bossEmail1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(263, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 567);
             this.panel2.TabIndex = 2;
+            // 
+            // bossEmail1
+            // 
+            this.bossEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossEmail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bossEmail1.Location = new System.Drawing.Point(0, 0);
+            this.bossEmail1.Name = "bossEmail1";
+            this.bossEmail1.Size = new System.Drawing.Size(916, 567);
+            this.bossEmail1.TabIndex = 0;
+            // 
+            // bossProfiel1
+            // 
+            this.bossProfiel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossProfiel1.Location = new System.Drawing.Point(0, 0);
+            this.bossProfiel1.Name = "bossProfiel1";
+            this.bossProfiel1.Size = new System.Drawing.Size(916, 567);
+            this.bossProfiel1.TabIndex = 1;
+            // 
+            // bossManageSchedule1
+            // 
+            this.bossManageSchedule1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossManageSchedule1.Location = new System.Drawing.Point(0, 0);
+            this.bossManageSchedule1.Name = "bossManageSchedule1";
+            this.bossManageSchedule1.Size = new System.Drawing.Size(916, 567);
+            this.bossManageSchedule1.TabIndex = 2;
+            // 
+            // bossManageEmployees1
+            // 
+            this.bossManageEmployees1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossManageEmployees1.Location = new System.Drawing.Point(0, 0);
+            this.bossManageEmployees1.Name = "bossManageEmployees1";
+            this.bossManageEmployees1.Size = new System.Drawing.Size(916, 567);
+            this.bossManageEmployees1.TabIndex = 3;
             // 
             // BossForm
             // 
@@ -209,8 +251,10 @@ namespace ClockIn
             this.Controls.Add(this.panel1);
             this.Name = "BossForm";
             this.Text = "BossForm";
+            this.Load += new System.EventHandler(this.BossForm_Load);
             this.panel1.ResumeLayout(false);
             this.workerLeftPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,5 +270,9 @@ namespace ClockIn
         private FontAwesome.Sharp.IconButton profileIconButton;
         private FontAwesome.Sharp.IconButton ManageScheduleBtn;
         private System.Windows.Forms.Panel panel2;
+        private BossEmail bossEmail1;
+        private BossManageEmployees bossManageEmployees1;
+        private BossManageSchedule bossManageSchedule1;
+        private BossProfiel bossProfiel1;
     }
 }
