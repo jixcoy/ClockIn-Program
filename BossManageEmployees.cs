@@ -29,18 +29,14 @@ namespace ClockIn
 
         private void BossManageEmployees_Load(object sender, EventArgs e)
         {
-            foreach (var employee in employees)
-            {
-                if (Form1.logInTb == employee.Id.ToString())
-                {
-                    DataGridViewRow dr = new DataGridViewRow();
-                    dr.CreateCells(manageEmployeesDTbl);
-                    dr.Cells[0].Value = employee.Name;
-                    dr.Cells[1].Value = employee.Rating;
-                    dr.Cells[2].Value = employee.Pay;
-                    manageEmployeesDTbl.Rows.Add(dr);
-                }
-            }
+            // do linq
+            manageEmployeesDTbl.DataSource = employees
+                .Select(i => new { i.Name, i.Shift, i.Rating, i.Pay }).ToList();
+        }
+
+        private void manageEmployeesDTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

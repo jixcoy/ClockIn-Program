@@ -29,12 +29,11 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ManageEmployeesTitle = new System.Windows.Forms.Panel();
             this.ManageEmployeesLbl = new System.Windows.Forms.Label();
             this.manageEmployeesDTbl = new System.Windows.Forms.DataGridView();
-            this.NName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ManageEmployeesTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).BeginInit();
             this.SuspendLayout();
@@ -44,65 +43,72 @@ namespace ClockIn
             this.ManageEmployeesTitle.Controls.Add(this.ManageEmployeesLbl);
             this.ManageEmployeesTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.ManageEmployeesTitle.Location = new System.Drawing.Point(0, 0);
+            this.ManageEmployeesTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManageEmployeesTitle.Name = "ManageEmployeesTitle";
-            this.ManageEmployeesTitle.Size = new System.Drawing.Size(916, 100);
+            this.ManageEmployeesTitle.Size = new System.Drawing.Size(687, 81);
             this.ManageEmployeesTitle.TabIndex = 0;
             // 
             // ManageEmployeesLbl
             // 
             this.ManageEmployeesLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ManageEmployeesLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageEmployeesLbl.ForeColor = System.Drawing.Color.White;
             this.ManageEmployeesLbl.Location = new System.Drawing.Point(0, 0);
+            this.ManageEmployeesLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ManageEmployeesLbl.Name = "ManageEmployeesLbl";
-            this.ManageEmployeesLbl.Size = new System.Drawing.Size(916, 100);
+            this.ManageEmployeesLbl.Size = new System.Drawing.Size(687, 81);
             this.ManageEmployeesLbl.TabIndex = 0;
             this.ManageEmployeesLbl.Text = "Manage Employees";
             this.ManageEmployeesLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // manageEmployeesDTbl
             // 
+            this.manageEmployeesDTbl.AllowUserToAddRows = false;
+            this.manageEmployeesDTbl.AllowUserToDeleteRows = false;
+            this.manageEmployeesDTbl.AllowUserToResizeColumns = false;
+            this.manageEmployeesDTbl.AllowUserToResizeRows = false;
+            this.manageEmployeesDTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.manageEmployeesDTbl.BackgroundColor = System.Drawing.Color.White;
+            this.manageEmployeesDTbl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.manageEmployeesDTbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.manageEmployeesDTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.manageEmployeesDTbl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NName,
-            this.Rating,
-            this.Pay});
-            this.manageEmployeesDTbl.Location = new System.Drawing.Point(169, 152);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle4;
+            this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 81);
+            this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.manageEmployeesDTbl.Name = "manageEmployeesDTbl";
+            this.manageEmployeesDTbl.RowHeadersVisible = false;
             this.manageEmployeesDTbl.RowHeadersWidth = 51;
             this.manageEmployeesDTbl.RowTemplate.Height = 24;
-            this.manageEmployeesDTbl.Size = new System.Drawing.Size(428, 236);
+            this.manageEmployeesDTbl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.manageEmployeesDTbl.Size = new System.Drawing.Size(687, 380);
             this.manageEmployeesDTbl.TabIndex = 1;
-            // 
-            // NName
-            // 
-            this.NName.HeaderText = "Name";
-            this.NName.MinimumWidth = 6;
-            this.NName.Name = "NName";
-            this.NName.Width = 125;
-            // 
-            // Rating
-            // 
-            this.Rating.HeaderText = "Rating";
-            this.Rating.MinimumWidth = 6;
-            this.Rating.Name = "Rating";
-            this.Rating.Width = 125;
-            // 
-            // Pay
-            // 
-            this.Pay.HeaderText = "Pay";
-            this.Pay.MinimumWidth = 6;
-            this.Pay.Name = "Pay";
-            this.Pay.Width = 125;
+            this.manageEmployeesDTbl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.manageEmployeesDTbl_CellContentClick);
             // 
             // BossManageEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
             this.Controls.Add(this.manageEmployeesDTbl);
             this.Controls.Add(this.ManageEmployeesTitle);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BossManageEmployees";
-            this.Size = new System.Drawing.Size(916, 567);
+            this.Size = new System.Drawing.Size(687, 461);
             this.Load += new System.EventHandler(this.BossManageEmployees_Load);
             this.ManageEmployeesTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).EndInit();
@@ -115,8 +121,5 @@ namespace ClockIn
         private System.Windows.Forms.Panel ManageEmployeesTitle;
         private System.Windows.Forms.Label ManageEmployeesLbl;
         private System.Windows.Forms.DataGridView manageEmployeesDTbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rating;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pay;
     }
 }
