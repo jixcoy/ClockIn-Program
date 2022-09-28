@@ -33,7 +33,6 @@ namespace ClockIn
         }
         private void BossManageEmployees_Load(object sender, EventArgs e)
         {
-            // do linq
             EnterStats();
         }
 
@@ -57,6 +56,7 @@ namespace ClockIn
             payCustomTb.Hide();
             shiftCustomTB.Hide();
             cancelBtn.Hide();
+            enterBtn.Hide();
         }
         private void cancelBtn_Click(object sender, EventArgs e)
         {
@@ -71,9 +71,12 @@ namespace ClockIn
             newEmployee.Id = Convert.ToInt32(idCustomTb.Texts);
             newEmployee.Shift = shiftCustomTB.Texts;
             newEmployee.Pay = payCustomTb.Texts;
-            DBAccess.SaveEmployee(newEmployee);
 
+            // Saves employee to data base and reloads data table
+            DBAccess.SaveEmployee(newEmployee);
+            employees = DBAccess.LoadStats();
             EnterStats();
+
             hideAddButtons();
         }
     }
