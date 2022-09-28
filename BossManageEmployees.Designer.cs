@@ -43,7 +43,7 @@ namespace ClockIn
             this.ManageEmployeesTitle.Controls.Add(this.ManageEmployeesLbl);
             this.ManageEmployeesTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.ManageEmployeesTitle.Location = new System.Drawing.Point(0, 0);
-            this.ManageEmployeesTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ManageEmployeesTitle.Margin = new System.Windows.Forms.Padding(2);
             this.ManageEmployeesTitle.Name = "ManageEmployeesTitle";
             this.ManageEmployeesTitle.Size = new System.Drawing.Size(687, 81);
             this.ManageEmployeesTitle.TabIndex = 0;
@@ -87,15 +87,15 @@ namespace ClockIn
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle4;
-            this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 81);
-            this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(2);
             this.manageEmployeesDTbl.Name = "manageEmployeesDTbl";
             this.manageEmployeesDTbl.RowHeadersVisible = false;
             this.manageEmployeesDTbl.RowHeadersWidth = 51;
             this.manageEmployeesDTbl.RowTemplate.Height = 24;
             this.manageEmployeesDTbl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.manageEmployeesDTbl.Size = new System.Drawing.Size(687, 380);
+            this.manageEmployeesDTbl.Size = new System.Drawing.Size(687, 228);
             this.manageEmployeesDTbl.TabIndex = 1;
             this.manageEmployeesDTbl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.manageEmployeesDTbl_CellContentClick);
             // 
@@ -106,7 +106,7 @@ namespace ClockIn
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
             this.Controls.Add(this.manageEmployeesDTbl);
             this.Controls.Add(this.ManageEmployeesTitle);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BossManageEmployees";
             this.Size = new System.Drawing.Size(687, 461);
             this.Load += new System.EventHandler(this.BossManageEmployees_Load);

@@ -104,6 +104,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CLasses\DBAccess.cs" />
+    <Compile Include="CustomTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTB.Designer.cs">
+      <DependentUpon>CustomTB.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmailF.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BossProfiel.resx">
       <DependentUpon>BossProfiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomTB.resx">
+      <DependentUpon>CustomTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailF.resx">
       <DependentUpon>EmailF.cs</DependentUpon>
