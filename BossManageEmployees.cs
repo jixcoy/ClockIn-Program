@@ -26,22 +26,15 @@ namespace ClockIn
                 employees.Add(newEmployee);
             }
         }
-
-        private void BossManageEmployees_Load(object sender, EventArgs e)
+        private void EnterStats()
         {
-            // do linq
             manageEmployeesDTbl.DataSource = employees
                 .Select(i => new { i.Name, i.Shift, i.Rating, i.Pay }).ToList();
         }
-
-        private void manageEmployeesDTbl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BossManageEmployees_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void customTB1_Load(object sender, EventArgs e)
-        {
-
+            // do linq
+            EnterStats();
         }
 
         private void addEmpBtn_Click(object sender, EventArgs e)
@@ -55,9 +48,9 @@ namespace ClockIn
             shiftCustomTB.Show();
             shiftCustomTB.Texts = "Shift";
             cancelBtn.Show();
+            enterBtn.Show();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void hideAddButtons()
         {
             nameCustomTb.Hide();
             idCustomTb.Hide();
@@ -65,10 +58,23 @@ namespace ClockIn
             shiftCustomTB.Hide();
             cancelBtn.Hide();
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
+            hideAddButtons();
+        }
 
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
+            // Creates new employee object and adds to database
+            Employee newEmployee = new Employee();
+            newEmployee.Name = nameCustomTb.Texts;
+            newEmployee.Id = Convert.ToInt32(idCustomTb.Texts);
+            newEmployee.Shift = shiftCustomTB.Texts;
+            newEmployee.Pay = payCustomTb.Texts;
+            DBAccess.SaveEmployee(newEmployee);
+
+            EnterStats();
+            hideAddButtons();
         }
     }
 }
