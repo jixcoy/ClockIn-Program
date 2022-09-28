@@ -9,11 +9,14 @@ namespace ClockIn
         {
             InitializeComponent();
             FormManager.wform = this;
+
+            // Sets Clock in logo to the top
             workerLeftPanel.Controls.SetChildIndex(clockInLabel, 5);
         }
 
         private void hideAllUserControls()
         {
+            // Hides all the user controls on the form
             fEmployeeProfile1.Hide();
             emailF1.Hide();
             hoursF1.Hide();
@@ -21,6 +24,7 @@ namespace ClockIn
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Log out
             this.Hide();
             FormManager.form1.Show();
 
@@ -28,18 +32,21 @@ namespace ClockIn
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            // Show profile
             hideAllUserControls();
             fEmployeeProfile1.Show();
         }
 
         private void emailIconBtn_Click(object sender, EventArgs e)
         {
+            // Show email
             hideAllUserControls();
             emailF1.Show();
         }
 
         private void hoursIconBtn_Click(object sender, EventArgs e)
         {
+            // Show hours and shifts
             hideAllUserControls();
             hoursF1.Show();
 
@@ -47,6 +54,7 @@ namespace ClockIn
 
         private void WorkerForm_Load(object sender, EventArgs e)
         {
+            // Show profile on load and hide other user controls
             hideAllUserControls();
             fEmployeeProfile1.Show();
 

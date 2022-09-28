@@ -12,9 +12,11 @@ namespace ClockIn
 {
     public partial class BossManageEmployees : UserControl
     {
+        List<Employee> employees = new List<Employee>();
         public BossManageEmployees()
         {
             InitializeComponent();
+            employees = DBAccess.LoadStats();
         }
     }
 }

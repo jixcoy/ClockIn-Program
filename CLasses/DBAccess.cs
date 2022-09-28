@@ -12,11 +12,19 @@ namespace ClockIn
     {
         public static List<Employee> LoadEmployees()
         {
-            Form1 f = new Form1();
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 
                 var output = cnn.Query<Employee>("Select * from Hours", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+        public static List<Employee> LoadStats()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+
+                var output = cnn.Query<Employee>("Select * from Stats", new DynamicParameters());
                 return output.ToList();
             }
         }
