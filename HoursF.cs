@@ -20,12 +20,6 @@ namespace ClockIn
             catch(Exception exc)
             {
                 Employee newEmployee = new Employee();
-                newEmployee.Name = "john";
-                newEmployee.Id = 1234;
-                newEmployee.Shift = "first";
-                newEmployee.Date = "12/10/2003";
-                newEmployee.Hours = "4";
-                newEmployee.Role = "employee";
                 employees.Add(newEmployee);
             }
         }

@@ -16,7 +16,31 @@ namespace ClockIn
         public BossManageEmployees()
         {
             InitializeComponent();
-            employees = DBAccess.LoadStats();
+            try
+            {
+                employees = DBAccess.LoadStats();
+            }
+            catch (Exception exc)
+            {
+                Employee newEmployee = new Employee();
+                employees.Add(newEmployee);
+            }
+        }
+
+        private void BossManageEmployees_Load(object sender, EventArgs e)
+        {
+            foreach (var employee in employees)
+            {
+                if (Form1.logInTb == employee.Id.ToString())
+                {
+                    DataGridViewRow dr = new DataGridViewRow();
+                    dr.CreateCells(manageEmployeesDTbl);
+                    dr.Cells[0].Value = employee.Name;
+                    dr.Cells[1].Value = employee.Rating;
+                    dr.Cells[2].Value = employee.Pay;
+                    manageEmployeesDTbl.Rows.Add(dr);
+                }
+            }
         }
     }
 }
