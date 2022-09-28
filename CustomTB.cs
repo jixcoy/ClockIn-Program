@@ -16,16 +16,15 @@ namespace ClockIn
         {
             InitializeComponent();
         }
-
         public string Texts
         {
             get
             {
-                return textBox1.Text;
+                return textBox.Text;
             }
             set
             {
-                textBox1.Text = value;
+                textBox.Text = value;
             }
         }
     }

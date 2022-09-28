@@ -38,5 +38,37 @@ namespace ClockIn
         {
 
         }
+
+        private void customTB1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmpBtn_Click(object sender, EventArgs e)
+        {
+            nameCustomTb.Show();
+            nameCustomTb.Texts = "Name";
+            idCustomTb.Show();
+            idCustomTb.Texts = "ID";
+            payCustomTb.Show();
+            payCustomTb.Texts = "Pay";
+            shiftCustomTB.Show();
+            shiftCustomTB.Texts = "Shift";
+            cancelBtn.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            nameCustomTb.Hide();
+            idCustomTb.Hide();
+            payCustomTb.Hide();
+            shiftCustomTB.Hide();
+            cancelBtn.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
