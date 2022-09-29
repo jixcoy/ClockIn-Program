@@ -29,20 +29,23 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ManageEmployeesTitle = new System.Windows.Forms.Panel();
             this.ManageEmployeesLbl = new System.Windows.Forms.Label();
             this.manageEmployeesDTbl = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.nameCustomTb = new ClockIn.CustomTB();
             this.addEmpBtn = new System.Windows.Forms.Button();
-            this.shiftCustomTB = new ClockIn.CustomTB();
-            this.payCustomTb = new ClockIn.CustomTB();
-            this.idCustomTb = new ClockIn.CustomTB();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.enterBtn = new System.Windows.Forms.Button();
+            this.removeEmpBtn = new System.Windows.Forms.Button();
+            this.removeEnterBtn = new System.Windows.Forms.Button();
+            this.removeCancelBtn = new System.Windows.Forms.Button();
+            this.removeConfirmTb = new ClockIn.CustomTB();
+            this.removeNameTb = new ClockIn.CustomTB();
+            this.nidCustomTb = new ClockIn.CustomTB();
+            this.npayCustomTb = new ClockIn.CustomTB();
+            this.nshiftCustomTB = new ClockIn.CustomTB();
+            this.nnameCustomTb = new ClockIn.CustomTB();
             this.ManageEmployeesTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).BeginInit();
             this.SuspendLayout();
@@ -52,9 +55,9 @@ namespace ClockIn
             this.ManageEmployeesTitle.Controls.Add(this.ManageEmployeesLbl);
             this.ManageEmployeesTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.ManageEmployeesTitle.Location = new System.Drawing.Point(0, 0);
-            this.ManageEmployeesTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.ManageEmployeesTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ManageEmployeesTitle.Name = "ManageEmployeesTitle";
-            this.ManageEmployeesTitle.Size = new System.Drawing.Size(687, 81);
+            this.ManageEmployeesTitle.Size = new System.Drawing.Size(916, 100);
             this.ManageEmployeesTitle.TabIndex = 0;
             // 
             // ManageEmployeesLbl
@@ -63,9 +66,8 @@ namespace ClockIn
             this.ManageEmployeesLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageEmployeesLbl.ForeColor = System.Drawing.Color.White;
             this.ManageEmployeesLbl.Location = new System.Drawing.Point(0, 0);
-            this.ManageEmployeesLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ManageEmployeesLbl.Name = "ManageEmployeesLbl";
-            this.ManageEmployeesLbl.Size = new System.Drawing.Size(687, 81);
+            this.ManageEmployeesLbl.Size = new System.Drawing.Size(916, 100);
             this.ManageEmployeesLbl.TabIndex = 0;
             this.ManageEmployeesLbl.Text = "Manage Employees";
             this.ManageEmployeesLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,72 +99,34 @@ namespace ClockIn
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle2;
             this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 81);
-            this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(2);
+            this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 100);
+            this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.manageEmployeesDTbl.Name = "manageEmployeesDTbl";
             this.manageEmployeesDTbl.RowHeadersVisible = false;
             this.manageEmployeesDTbl.RowHeadersWidth = 51;
             this.manageEmployeesDTbl.RowTemplate.Height = 24;
             this.manageEmployeesDTbl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.manageEmployeesDTbl.Size = new System.Drawing.Size(687, 228);
+            this.manageEmployeesDTbl.Size = new System.Drawing.Size(916, 281);
             this.manageEmployeesDTbl.TabIndex = 1;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // nameCustomTb
-            // 
-            this.nameCustomTb.Location = new System.Drawing.Point(14, 367);
-            this.nameCustomTb.Name = "nameCustomTb";
-            this.nameCustomTb.Size = new System.Drawing.Size(171, 25);
-            this.nameCustomTb.TabIndex = 3;
-            this.nameCustomTb.Texts = "";
-            this.nameCustomTb.Visible = false;
             // 
             // addEmpBtn
             // 
-            this.addEmpBtn.Location = new System.Drawing.Point(14, 326);
+            this.addEmpBtn.AutoSize = true;
+            this.addEmpBtn.Location = new System.Drawing.Point(10, 401);
+            this.addEmpBtn.Margin = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.addEmpBtn.Name = "addEmpBtn";
-            this.addEmpBtn.Size = new System.Drawing.Size(115, 23);
+            this.addEmpBtn.Size = new System.Drawing.Size(153, 28);
             this.addEmpBtn.TabIndex = 4;
             this.addEmpBtn.Text = "Add Employee";
             this.addEmpBtn.UseVisualStyleBackColor = true;
             this.addEmpBtn.Click += new System.EventHandler(this.addEmpBtn_Click);
             // 
-            // shiftCustomTB
-            // 
-            this.shiftCustomTB.Location = new System.Drawing.Point(204, 398);
-            this.shiftCustomTB.Name = "shiftCustomTB";
-            this.shiftCustomTB.Size = new System.Drawing.Size(171, 25);
-            this.shiftCustomTB.TabIndex = 5;
-            this.shiftCustomTB.Texts = "";
-            this.shiftCustomTB.Visible = false;
-            // 
-            // payCustomTb
-            // 
-            this.payCustomTb.Location = new System.Drawing.Point(204, 367);
-            this.payCustomTb.Name = "payCustomTb";
-            this.payCustomTb.Size = new System.Drawing.Size(171, 25);
-            this.payCustomTb.TabIndex = 6;
-            this.payCustomTb.Texts = "";
-            this.payCustomTb.Visible = false;
-            // 
-            // idCustomTb
-            // 
-            this.idCustomTb.Location = new System.Drawing.Point(14, 398);
-            this.idCustomTb.Name = "idCustomTb";
-            this.idCustomTb.Size = new System.Drawing.Size(171, 25);
-            this.idCustomTb.TabIndex = 7;
-            this.idCustomTb.Texts = "";
-            this.idCustomTb.Visible = false;
-            // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(218, 326);
+            this.cancelBtn.Location = new System.Drawing.Point(279, 401);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelBtn.Size = new System.Drawing.Size(100, 28);
             this.cancelBtn.TabIndex = 8;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -171,36 +135,138 @@ namespace ClockIn
             // 
             // enterBtn
             // 
-            this.enterBtn.Location = new System.Drawing.Point(137, 326);
+            this.enterBtn.Location = new System.Drawing.Point(171, 401);
+            this.enterBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enterBtn.Name = "enterBtn";
-            this.enterBtn.Size = new System.Drawing.Size(75, 23);
+            this.enterBtn.Size = new System.Drawing.Size(100, 28);
             this.enterBtn.TabIndex = 9;
             this.enterBtn.Text = "Enter";
             this.enterBtn.UseVisualStyleBackColor = true;
             this.enterBtn.Visible = false;
             this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
+            // removeEmpBtn
+            // 
+            this.removeEmpBtn.AutoSize = true;
+            this.removeEmpBtn.Location = new System.Drawing.Point(753, 401);
+            this.removeEmpBtn.Margin = new System.Windows.Forms.Padding(4, 4, 10, 4);
+            this.removeEmpBtn.Name = "removeEmpBtn";
+            this.removeEmpBtn.Size = new System.Drawing.Size(153, 28);
+            this.removeEmpBtn.TabIndex = 10;
+            this.removeEmpBtn.Text = "Remove Employee";
+            this.removeEmpBtn.UseVisualStyleBackColor = true;
+            this.removeEmpBtn.Click += new System.EventHandler(this.removeEmpBtn_Click);
+            // 
+            // removeEnterBtn
+            // 
+            this.removeEnterBtn.Location = new System.Drawing.Point(645, 401);
+            this.removeEnterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.removeEnterBtn.Name = "removeEnterBtn";
+            this.removeEnterBtn.Size = new System.Drawing.Size(100, 28);
+            this.removeEnterBtn.TabIndex = 12;
+            this.removeEnterBtn.Text = "Enter";
+            this.removeEnterBtn.UseVisualStyleBackColor = true;
+            this.removeEnterBtn.Visible = false;
+            // 
+            // removeCancelBtn
+            // 
+            this.removeCancelBtn.Location = new System.Drawing.Point(537, 401);
+            this.removeCancelBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.removeCancelBtn.Name = "removeCancelBtn";
+            this.removeCancelBtn.Size = new System.Drawing.Size(100, 28);
+            this.removeCancelBtn.TabIndex = 13;
+            this.removeCancelBtn.Text = "Cancel";
+            this.removeCancelBtn.UseVisualStyleBackColor = true;
+            this.removeCancelBtn.Visible = false;
+            this.removeCancelBtn.Click += new System.EventHandler(this.removeCancelBtn_Click);
+            // 
+            // removeConfirmTb
+            // 
+            this.removeConfirmTb.Location = new System.Drawing.Point(678, 481);
+            this.removeConfirmTb.Margin = new System.Windows.Forms.Padding(5);
+            this.removeConfirmTb.Name = "removeConfirmTb";
+            this.removeConfirmTb.Size = new System.Drawing.Size(228, 31);
+            this.removeConfirmTb.TabIndex = 14;
+            this.removeConfirmTb.Texts = "";
+            this.removeConfirmTb.Visible = false;
+            // 
+            // removeNameTb
+            // 
+            this.removeNameTb.Location = new System.Drawing.Point(678, 449);
+            this.removeNameTb.Margin = new System.Windows.Forms.Padding(5);
+            this.removeNameTb.Name = "removeNameTb";
+            this.removeNameTb.Size = new System.Drawing.Size(228, 31);
+            this.removeNameTb.TabIndex = 11;
+            this.removeNameTb.Texts = "";
+            this.removeNameTb.Visible = false;
+            // 
+            // nidCustomTb
+            // 
+            this.nidCustomTb.Location = new System.Drawing.Point(10, 481);
+            this.nidCustomTb.Margin = new System.Windows.Forms.Padding(5);
+            this.nidCustomTb.Name = "nidCustomTb";
+            this.nidCustomTb.Size = new System.Drawing.Size(228, 31);
+            this.nidCustomTb.TabIndex = 7;
+            this.nidCustomTb.Texts = "";
+            this.nidCustomTb.Visible = false;
+            // 
+            // npayCustomTb
+            // 
+            this.npayCustomTb.Location = new System.Drawing.Point(243, 449);
+            this.npayCustomTb.Margin = new System.Windows.Forms.Padding(5);
+            this.npayCustomTb.Name = "npayCustomTb";
+            this.npayCustomTb.Size = new System.Drawing.Size(228, 31);
+            this.npayCustomTb.TabIndex = 6;
+            this.npayCustomTb.Texts = "";
+            this.npayCustomTb.Visible = false;
+            // 
+            // nshiftCustomTB
+            // 
+            this.nshiftCustomTB.Location = new System.Drawing.Point(243, 481);
+            this.nshiftCustomTB.Margin = new System.Windows.Forms.Padding(5);
+            this.nshiftCustomTB.Name = "nshiftCustomTB";
+            this.nshiftCustomTB.Size = new System.Drawing.Size(228, 31);
+            this.nshiftCustomTB.TabIndex = 5;
+            this.nshiftCustomTB.Texts = "";
+            this.nshiftCustomTB.Visible = false;
+            // 
+            // nnameCustomTb
+            // 
+            this.nnameCustomTb.Location = new System.Drawing.Point(10, 449);
+            this.nnameCustomTb.Margin = new System.Windows.Forms.Padding(5);
+            this.nnameCustomTb.Name = "nnameCustomTb";
+            this.nnameCustomTb.Size = new System.Drawing.Size(228, 31);
+            this.nnameCustomTb.TabIndex = 3;
+            this.nnameCustomTb.Texts = "";
+            this.nnameCustomTb.Visible = false;
+            // 
             // BossManageEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.Controls.Add(this.removeConfirmTb);
+            this.Controls.Add(this.removeCancelBtn);
+            this.Controls.Add(this.removeEnterBtn);
+            this.Controls.Add(this.removeNameTb);
+            this.Controls.Add(this.removeEmpBtn);
             this.Controls.Add(this.enterBtn);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.idCustomTb);
-            this.Controls.Add(this.payCustomTb);
-            this.Controls.Add(this.shiftCustomTB);
+            this.Controls.Add(this.nidCustomTb);
+            this.Controls.Add(this.npayCustomTb);
+            this.Controls.Add(this.nshiftCustomTB);
             this.Controls.Add(this.addEmpBtn);
-            this.Controls.Add(this.nameCustomTb);
+            this.Controls.Add(this.nnameCustomTb);
             this.Controls.Add(this.manageEmployeesDTbl);
             this.Controls.Add(this.ManageEmployeesTitle);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "BossManageEmployees";
-            this.Size = new System.Drawing.Size(687, 461);
+            this.Size = new System.Drawing.Size(916, 567);
             this.Load += new System.EventHandler(this.BossManageEmployees_Load);
             this.ManageEmployeesTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,13 +275,17 @@ namespace ClockIn
         private System.Windows.Forms.Panel ManageEmployeesTitle;
         private System.Windows.Forms.Label ManageEmployeesLbl;
         private System.Windows.Forms.DataGridView manageEmployeesDTbl;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private CustomTB nameCustomTb;
+        private CustomTB nnameCustomTb;
         private System.Windows.Forms.Button addEmpBtn;
-        private CustomTB shiftCustomTB;
-        private CustomTB payCustomTb;
-        private CustomTB idCustomTb;
+        private CustomTB nshiftCustomTB;
+        private CustomTB npayCustomTb;
+        private CustomTB nidCustomTb;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button enterBtn;
+        private System.Windows.Forms.Button removeEmpBtn;
+        private CustomTB removeNameTb;
+        private System.Windows.Forms.Button removeEnterBtn;
+        private System.Windows.Forms.Button removeCancelBtn;
+        private CustomTB removeConfirmTb;
     }
 }

@@ -34,29 +34,43 @@ namespace ClockIn
         private void BossManageEmployees_Load(object sender, EventArgs e)
         {
             EnterStats();
+            hideRemoveButtons();
+            hideAddButtons();
         }
 
         private void addEmpBtn_Click(object sender, EventArgs e)
         {
-            nameCustomTb.Show();
-            nameCustomTb.Texts = "Name";
-            idCustomTb.Show();
-            idCustomTb.Texts = "ID";
-            payCustomTb.Show();
-            payCustomTb.Texts = "Pay";
-            shiftCustomTB.Show();
-            shiftCustomTB.Texts = "Shift";
+            nnameCustomTb.Show();
+            nnameCustomTb.Texts = "Name";
+            nidCustomTb.Show();
+            nidCustomTb.Texts = "ID";
+            npayCustomTb.Show();
+            npayCustomTb.Texts = "Pay";
+            nshiftCustomTB.Show();
+            nshiftCustomTB.Texts = "Shift";
             cancelBtn.Show();
             enterBtn.Show();
         }
         private void hideAddButtons()
         {
-            nameCustomTb.Hide();
-            idCustomTb.Hide();
-            payCustomTb.Hide();
-            shiftCustomTB.Hide();
+            nnameCustomTb.Hide();
+            nidCustomTb.Hide();
+            npayCustomTb.Hide();
+            nshiftCustomTB.Hide();
             cancelBtn.Hide();
             enterBtn.Hide();
+        }
+        private void hideRemoveButtons()
+        {
+            // Hides all remove buttons and textboxes. Resets textboxs values
+            removeCancelBtn.Hide();
+            removeConfirmTb.Hide();
+            removeEnterBtn.Hide();
+            removeNameTb.Hide();
+            removeConfirmTb.Hide();
+            removeNameTb.Texts = "Name";
+            removeConfirmTb.Texts = "Confirm? (Type \"Yes\" or \"No\")";
+
         }
         private void cancelBtn_Click(object sender, EventArgs e)
         {
@@ -67,10 +81,10 @@ namespace ClockIn
         {
             // Creates new employee object and adds to database
             Employee newEmployee = new Employee();
-            newEmployee.Name = nameCustomTb.Texts;
-            newEmployee.Id = Convert.ToInt32(idCustomTb.Texts);
-            newEmployee.Shift = shiftCustomTB.Texts;
-            newEmployee.Pay = payCustomTb.Texts;
+            newEmployee.Name = nnameCustomTb.Texts;
+            newEmployee.Id = Convert.ToInt32(nidCustomTb.Texts);
+            newEmployee.Shift = nshiftCustomTB.Texts;
+            newEmployee.Pay = npayCustomTb.Texts;
 
             // Saves employee to data base and reloads data table
             DBAccess.SaveEmployee(newEmployee);
@@ -78,6 +92,20 @@ namespace ClockIn
             EnterStats();
 
             hideAddButtons();
+        }
+
+        private void removeEmpBtn_Click(object sender, EventArgs e)
+        {
+            removeCancelBtn.Show();
+            removeConfirmTb.Show();
+            removeEnterBtn.Show();
+            removeNameTb.Show();
+            removeConfirmTb.Show();
+        }
+
+        private void removeCancelBtn_Click(object sender, EventArgs e)
+        {
+            hideRemoveButtons();
         }
     }
 }
