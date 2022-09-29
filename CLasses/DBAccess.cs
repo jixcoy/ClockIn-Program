@@ -39,6 +39,7 @@ namespace ClockIn
         public static void SaveHours(Employee emp)
         {
             // Saves new hour entry to Hours data table
+            // NOT DONE
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute($"INSERT INTO \"main\".\"Hours\"(\"Hours\",\"Date\",\"Name\",\"ID\",\"Role\",\"Shift\") VALUES ();");
@@ -50,6 +51,14 @@ namespace ClockIn
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute($"DELETE FROM \"main\".\"Stats\" WHERE Name=\"{emp.Name}\"");
+            }
+        }
+        public static void ChangeSchedule(Employee emp, string newShift, string newRole)
+        {
+            // Edits the shift and role of an employee
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"UPDATE \"main\".\"Stats\" SET Shift = \"{newShift}\", Role = \"{newRole}\" WHERE Name = \"{emp.Name}\";");
             }
         }
         private static string LoadConnectionString(string id = "Default")

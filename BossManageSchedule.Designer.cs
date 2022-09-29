@@ -29,15 +29,17 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TitleLbl = new System.Windows.Forms.Label();
             this.manageScheduleDTBL = new System.Windows.Forms.DataGridView();
             this.editEmployeeBtn = new System.Windows.Forms.Button();
-            this.editNameTB = new ClockIn.CustomTB();
-            this.editShiftTB = new ClockIn.CustomTB();
+            this.editCancelBtn = new System.Windows.Forms.Button();
+            this.editEnter = new System.Windows.Forms.Button();
             this.editRoleTB = new ClockIn.CustomTB();
+            this.editShiftTB = new ClockIn.CustomTB();
+            this.editNameTB = new ClockIn.CustomTB();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manageScheduleDTBL)).BeginInit();
             this.SuspendLayout();
@@ -72,23 +74,23 @@ namespace ClockIn
             this.manageScheduleDTBL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.manageScheduleDTBL.BackgroundColor = System.Drawing.Color.White;
             this.manageScheduleDTBL.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.manageScheduleDTBL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.manageScheduleDTBL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.manageScheduleDTBL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.manageScheduleDTBL.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.manageScheduleDTBL.DefaultCellStyle = dataGridViewCellStyle2;
             this.manageScheduleDTBL.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageScheduleDTBL.Location = new System.Drawing.Point(0, 100);
             this.manageScheduleDTBL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -105,44 +107,68 @@ namespace ClockIn
             this.editEmployeeBtn.Location = new System.Drawing.Point(384, 409);
             this.editEmployeeBtn.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.editEmployeeBtn.Name = "editEmployeeBtn";
-            this.editEmployeeBtn.Size = new System.Drawing.Size(128, 23);
+            this.editEmployeeBtn.Size = new System.Drawing.Size(128, 33);
             this.editEmployeeBtn.TabIndex = 3;
             this.editEmployeeBtn.Text = "Edit Employee";
             this.editEmployeeBtn.UseVisualStyleBackColor = true;
             this.editEmployeeBtn.Click += new System.EventHandler(this.editEmployeeBtn_Click);
             // 
-            // editNameTB
+            // editCancelBtn
             // 
-            this.editNameTB.Location = new System.Drawing.Point(10, 449);
-            this.editNameTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.editNameTB.Name = "editNameTB";
-            this.editNameTB.Size = new System.Drawing.Size(287, 31);
-            this.editNameTB.TabIndex = 4;
-            this.editNameTB.Texts = "Text";
+            this.editCancelBtn.Location = new System.Drawing.Point(305, 502);
+            this.editCancelBtn.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.editCancelBtn.Name = "editCancelBtn";
+            this.editCancelBtn.Size = new System.Drawing.Size(128, 30);
+            this.editCancelBtn.TabIndex = 7;
+            this.editCancelBtn.Text = "Cancel";
+            this.editCancelBtn.UseVisualStyleBackColor = true;
+            this.editCancelBtn.Click += new System.EventHandler(this.editCancelBtn_Click);
             // 
-            // editShiftTB
+            // editEnter
             // 
-            this.editShiftTB.Location = new System.Drawing.Point(305, 449);
-            this.editShiftTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.editShiftTB.Name = "editShiftTB";
-            this.editShiftTB.Size = new System.Drawing.Size(287, 31);
-            this.editShiftTB.TabIndex = 5;
-            this.editShiftTB.Texts = "Text";
+            this.editEnter.Location = new System.Drawing.Point(464, 502);
+            this.editEnter.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.editEnter.Name = "editEnter";
+            this.editEnter.Size = new System.Drawing.Size(128, 30);
+            this.editEnter.TabIndex = 8;
+            this.editEnter.Text = "Enter";
+            this.editEnter.UseVisualStyleBackColor = true;
+            this.editEnter.Click += new System.EventHandler(this.editEnter_Click);
             // 
             // editRoleTB
             // 
-            this.editRoleTB.Location = new System.Drawing.Point(600, 449);
+            this.editRoleTB.Location = new System.Drawing.Point(600, 464);
             this.editRoleTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editRoleTB.Name = "editRoleTB";
             this.editRoleTB.Size = new System.Drawing.Size(287, 31);
             this.editRoleTB.TabIndex = 6;
             this.editRoleTB.Texts = "Text";
             // 
+            // editShiftTB
+            // 
+            this.editShiftTB.Location = new System.Drawing.Point(305, 464);
+            this.editShiftTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editShiftTB.Name = "editShiftTB";
+            this.editShiftTB.Size = new System.Drawing.Size(287, 31);
+            this.editShiftTB.TabIndex = 5;
+            this.editShiftTB.Texts = "Text";
+            // 
+            // editNameTB
+            // 
+            this.editNameTB.Location = new System.Drawing.Point(10, 464);
+            this.editNameTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editNameTB.Name = "editNameTB";
+            this.editNameTB.Size = new System.Drawing.Size(287, 31);
+            this.editNameTB.TabIndex = 4;
+            this.editNameTB.Texts = "Text";
+            // 
             // BossManageSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.Controls.Add(this.editEnter);
+            this.Controls.Add(this.editCancelBtn);
             this.Controls.Add(this.editRoleTB);
             this.Controls.Add(this.editShiftTB);
             this.Controls.Add(this.editNameTB);
@@ -151,6 +177,7 @@ namespace ClockIn
             this.Controls.Add(this.panel1);
             this.Name = "BossManageSchedule";
             this.Size = new System.Drawing.Size(908, 567);
+            this.Load += new System.EventHandler(this.BossManageSchedule_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.manageScheduleDTBL)).EndInit();
             this.ResumeLayout(false);
@@ -166,5 +193,7 @@ namespace ClockIn
         private CustomTB editNameTB;
         private CustomTB editShiftTB;
         private CustomTB editRoleTB;
+        private System.Windows.Forms.Button editCancelBtn;
+        private System.Windows.Forms.Button editEnter;
     }
 }
