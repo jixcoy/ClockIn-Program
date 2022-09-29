@@ -20,7 +20,7 @@ namespace ClockIn
             {
                 employees = DBAccess.LoadStats();
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 Employee newEmployee = new Employee();
                 employees.Add(newEmployee);
