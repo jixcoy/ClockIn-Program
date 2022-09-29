@@ -29,7 +29,7 @@ namespace ClockIn
         private void EnterStats()
         {
             manageEmployeesDTbl.DataSource = employees
-                .Select(i => new { i.Name, i.Shift, i.Rating, i.Pay }).ToList();
+                .Select(i => new { i.Name, i.Role, i.Rating, i.Pay }).ToList();
         }
         private void BossManageEmployees_Load(object sender, EventArgs e)
         {
@@ -46,8 +46,8 @@ namespace ClockIn
             nidCustomTb.Texts = "ID";
             npayCustomTb.Show();
             npayCustomTb.Texts = "Pay";
-            nshiftCustomTB.Show();
-            nshiftCustomTB.Texts = "Shift";
+            nRoleCustomTB.Show();
+            nRoleCustomTB.Texts = "Role";
             cancelBtn.Show();
             enterBtn.Show();
         }
@@ -56,7 +56,7 @@ namespace ClockIn
             nnameCustomTb.Hide();
             nidCustomTb.Hide();
             npayCustomTb.Hide();
-            nshiftCustomTB.Hide();
+            nRoleCustomTB.Hide();
             cancelBtn.Hide();
             enterBtn.Hide();
         }
@@ -83,7 +83,7 @@ namespace ClockIn
             Employee newEmployee = new Employee();
             newEmployee.Name = nnameCustomTb.Texts;
             newEmployee.Id = Convert.ToInt32(nidCustomTb.Texts);
-            newEmployee.Shift = nshiftCustomTB.Texts;
+            newEmployee.Role = nRoleCustomTB.Texts;
             newEmployee.Pay = npayCustomTb.Texts;
 
             // Saves employee to data base and reloads data table
@@ -106,6 +106,22 @@ namespace ClockIn
         private void removeCancelBtn_Click(object sender, EventArgs e)
         {
             hideRemoveButtons();
+        }
+
+        private void removeEnterBtn_Click(object sender, EventArgs e)
+        {
+            if (removeConfirmTb.Texts.ToLower() == "yes")
+            {
+                Employee removedEmployee = new Employee();
+                foreach (Employee employee in employees)
+                    if (employee.Name == removeNameTb.Texts)
+                        removedEmployee = employee;
+                DBAccess.DeleteEmployee(removedEmployee);
+                employees = DBAccess.LoadStats();
+                EnterStats();
+                hideRemoveButtons();
+            } else
+                hideRemoveButtons();
         }
     }
 }

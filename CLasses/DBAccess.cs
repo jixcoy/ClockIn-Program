@@ -44,6 +44,14 @@ namespace ClockIn
                 cnn.Execute($"INSERT INTO \"main\".\"Hours\"(\"Hours\",\"Date\",\"Name\",\"ID\",\"Role\",\"Shift\") VALUES ();");
             }
         }
+        public static void DeleteEmployee(Employee emp)
+        {
+            // Saves new hour entry to Hours data table
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute($"DELETE FROM \"main\".\"Stats\" WHERE Name=\"{emp.Name}\"");
+            }
+        }
         private static string LoadConnectionString(string id = "Default")
         {
             // Returns Location of Employee data base

@@ -44,7 +44,7 @@ namespace ClockIn
             this.removeNameTb = new ClockIn.CustomTB();
             this.nidCustomTb = new ClockIn.CustomTB();
             this.npayCustomTb = new ClockIn.CustomTB();
-            this.nshiftCustomTB = new ClockIn.CustomTB();
+            this.nRoleCustomTB = new ClockIn.CustomTB();
             this.nnameCustomTb = new ClockIn.CustomTB();
             this.ManageEmployeesTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).BeginInit();
@@ -167,6 +167,7 @@ namespace ClockIn
             this.removeEnterBtn.Text = "Enter";
             this.removeEnterBtn.UseVisualStyleBackColor = true;
             this.removeEnterBtn.Visible = false;
+            this.removeEnterBtn.Click += new System.EventHandler(this.removeEnterBtn_Click);
             // 
             // removeCancelBtn
             // 
@@ -220,15 +221,15 @@ namespace ClockIn
             this.npayCustomTb.Texts = "";
             this.npayCustomTb.Visible = false;
             // 
-            // nshiftCustomTB
+            // nRoleCustomTB
             // 
-            this.nshiftCustomTB.Location = new System.Drawing.Point(243, 481);
-            this.nshiftCustomTB.Margin = new System.Windows.Forms.Padding(5);
-            this.nshiftCustomTB.Name = "nshiftCustomTB";
-            this.nshiftCustomTB.Size = new System.Drawing.Size(228, 31);
-            this.nshiftCustomTB.TabIndex = 5;
-            this.nshiftCustomTB.Texts = "";
-            this.nshiftCustomTB.Visible = false;
+            this.nRoleCustomTB.Location = new System.Drawing.Point(243, 481);
+            this.nRoleCustomTB.Margin = new System.Windows.Forms.Padding(5);
+            this.nRoleCustomTB.Name = "nRoleCustomTB";
+            this.nRoleCustomTB.Size = new System.Drawing.Size(228, 31);
+            this.nRoleCustomTB.TabIndex = 5;
+            this.nRoleCustomTB.Texts = "";
+            this.nRoleCustomTB.Visible = false;
             // 
             // nnameCustomTb
             // 
@@ -254,7 +255,7 @@ namespace ClockIn
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.nidCustomTb);
             this.Controls.Add(this.npayCustomTb);
-            this.Controls.Add(this.nshiftCustomTB);
+            this.Controls.Add(this.nRoleCustomTB);
             this.Controls.Add(this.addEmpBtn);
             this.Controls.Add(this.nnameCustomTb);
             this.Controls.Add(this.manageEmployeesDTbl);
@@ -277,7 +278,7 @@ namespace ClockIn
         private System.Windows.Forms.DataGridView manageEmployeesDTbl;
         private CustomTB nnameCustomTb;
         private System.Windows.Forms.Button addEmpBtn;
-        private CustomTB nshiftCustomTB;
+        private CustomTB nRoleCustomTB;
         private CustomTB npayCustomTb;
         private CustomTB nidCustomTb;
         private System.Windows.Forms.Button cancelBtn;
