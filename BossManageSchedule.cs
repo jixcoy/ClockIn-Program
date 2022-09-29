@@ -71,8 +71,9 @@ namespace ClockIn
 
             // Updates the Database
             DBAccess.ChangeSchedule(editEmployee, editShiftTB.Texts, editRoleTB.Texts);
-            employees = DBAccess.LoadEmployees();
+            employees = DBAccess.LoadStats();
             EnterStats();
+            HideAllEdits();
         }
 
         private void BossManageSchedule_Load(object sender, EventArgs e)
