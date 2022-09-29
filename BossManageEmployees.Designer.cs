@@ -29,8 +29,8 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ManageEmployeesTitle = new System.Windows.Forms.Panel();
             this.ManageEmployeesLbl = new System.Windows.Forms.Label();
             this.manageEmployeesDTbl = new System.Windows.Forms.DataGridView();
@@ -81,23 +81,23 @@ namespace ClockIn
             this.manageEmployeesDTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.manageEmployeesDTbl.BackgroundColor = System.Drawing.Color.White;
             this.manageEmployeesDTbl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.manageEmployeesDTbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.manageEmployeesDTbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.manageEmployeesDTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle4;
             this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 100);
             this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -111,7 +111,6 @@ namespace ClockIn
             // 
             // addEmpBtn
             // 
-            this.addEmpBtn.AutoSize = true;
             this.addEmpBtn.Location = new System.Drawing.Point(10, 401);
             this.addEmpBtn.Margin = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.addEmpBtn.Name = "addEmpBtn";
@@ -147,11 +146,10 @@ namespace ClockIn
             // 
             // removeEmpBtn
             // 
-            this.removeEmpBtn.AutoSize = true;
-            this.removeEmpBtn.Location = new System.Drawing.Point(753, 401);
+            this.removeEmpBtn.Location = new System.Drawing.Point(740, 401);
             this.removeEmpBtn.Margin = new System.Windows.Forms.Padding(4, 4, 10, 4);
             this.removeEmpBtn.Name = "removeEmpBtn";
-            this.removeEmpBtn.Size = new System.Drawing.Size(153, 28);
+            this.removeEmpBtn.Size = new System.Drawing.Size(166, 28);
             this.removeEmpBtn.TabIndex = 10;
             this.removeEmpBtn.Text = "Remove Employee";
             this.removeEmpBtn.UseVisualStyleBackColor = true;
@@ -159,7 +157,7 @@ namespace ClockIn
             // 
             // removeEnterBtn
             // 
-            this.removeEnterBtn.Location = new System.Drawing.Point(645, 401);
+            this.removeEnterBtn.Location = new System.Drawing.Point(632, 401);
             this.removeEnterBtn.Margin = new System.Windows.Forms.Padding(4);
             this.removeEnterBtn.Name = "removeEnterBtn";
             this.removeEnterBtn.Size = new System.Drawing.Size(100, 28);
@@ -171,7 +169,7 @@ namespace ClockIn
             // 
             // removeCancelBtn
             // 
-            this.removeCancelBtn.Location = new System.Drawing.Point(537, 401);
+            this.removeCancelBtn.Location = new System.Drawing.Point(524, 401);
             this.removeCancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.removeCancelBtn.Name = "removeCancelBtn";
             this.removeCancelBtn.Size = new System.Drawing.Size(100, 28);
@@ -267,7 +265,6 @@ namespace ClockIn
             this.ManageEmployeesTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.manageEmployeesDTbl)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

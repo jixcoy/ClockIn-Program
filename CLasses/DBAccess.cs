@@ -33,7 +33,7 @@ namespace ClockIn
             // Saves a new employee to Stats data table
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute($"INSERT INTO \"main\".\"Stats\"(\"Name\",\"Shift\",\"Rating\",\"Pay\",\"Id\") VALUES (\"{emp.Name}\", \"{emp.Shift}\", \"{emp.Rating}\", \"{emp.Pay}\", \"{emp.Id}\");");
+                cnn.Execute($"INSERT INTO \"main\".\"Stats\"(\"Name\",\"Shift\",\"Rating\",\"Pay\",\"Id\", \"Role\") VALUES (\"{emp.Name}\", \"{emp.Shift}\", \"{emp.Rating}\", \"{emp.Pay}\", \"{emp.Id}\", \"{emp.Role}\");");
             }
         }
         public static void SaveHours(Employee emp)
