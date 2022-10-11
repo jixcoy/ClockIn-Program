@@ -1,47 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace ClockIn
 {
     public partial class FEmployeeProfile : UserControl
     {
-        List<Employee> employeeList = new List<Employee>();
+        List<Employee> employees = new List<Employee>();
         //private string ID = Form1.form
         public FEmployeeProfile()
         {
             InitializeComponent();
-        }
-        private void LoadHoursDB()
-        {
-            employeeList = DBAccess.LoadEmployees();
-            //Get Specific employee
-            // 
-            foreach (var employee in employeeList)
+            try
             {
-
-                if (Form1.logInTb == employee.Id.ToString())
-                {
-                    UserNameLabel.Text = employee.Name;
-                    HoursValue.Text = employee.Hours;
-                    DateValue.Text = employee.Date;
-                    RoleLabel.Text = employee.Role;
-                }
+                employees = DBAccess.LoadEmployees();
             }
-
-
-            //UserNameLabel.Text = employee[].Name;
-            //HoursHead.Text = employee[0].Name;
+            catch (Exception)
+            {
+                Employee newEmployee = new Employee();
+                employees.Add(newEmployee);
+            }
         }
 
-        private void SetData()
+        private void EnterHours()
         {
-
+            profileHoursDtb.DataSource = employees
+                .Where(i => i.Id.ToString() == Form1.logInTb)
+                .Select(i => new { i.Hours, i.Date, i.Role, i.Shift }).ToList();
         }
 
         private void FEmployeeProfile_Load(object sender, EventArgs e)
         {
-            LoadHoursDB();
+            EnterHours();
+            var lol = employees
+                .Where(i => i.Id.ToString() == Form1.logInTb)
+                .Select(i => new {i.Name, i.Role}).ToList();
+            UserNameLabel.Text = lol[0].Name;
+            RoleLabel.Text = lol[0].Role;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

@@ -53,8 +53,15 @@ namespace ClockIn
         private void logOutBtn_Click(object sender, EventArgs e)
         {
             //Log out
+            Form1 form1 = new Form1();
             this.Hide();
-            FormManager.form1.Show();
+            form1.ShowDialog();
+            this.Close();
+        }
+
+        private void fEmployeeProfile1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

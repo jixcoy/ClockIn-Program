@@ -47,10 +47,11 @@ namespace ClockIn
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-            // LOG OUT
             //Log out
+            Form1 form1 = new Form1();
             this.Hide();
-            FormManager.form1.Show();
+            form1.ShowDialog();
+            this.Close();
         }
 
         private void ManageScheduleBtn_Click(object sender, EventArgs e)

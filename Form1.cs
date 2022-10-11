@@ -23,14 +23,15 @@ namespace ClockIn
         {
             employees = DBAccess.LoadEmployees();
             logInTb = textBox1.Text;
+            WorkerForm worker = new WorkerForm();
             foreach (var employee in employees)
             {
                 if (logInTb == employee.Id.ToString())
                 {
-                    WorkerForm worker = new WorkerForm();
                     FormManager.wform = worker;
                     this.Hide();
                     worker.ShowDialog();
+                    this.Close();
                 }
             }
             if (logInTb == "boss")
@@ -39,6 +40,7 @@ namespace ClockIn
                 FormManager.bform = boss;
                 this.Hide();
                 boss.ShowDialog();
+                this.Close();
             }
         }
         private void iconStartButton_Click(object sender, EventArgs e)

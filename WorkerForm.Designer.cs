@@ -132,18 +132,19 @@ namespace ClockIn
             // fEmployeeProfile1
             // 
             this.fEmployeeProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.fEmployeeProfile1.Location = new System.Drawing.Point(195, 1);
-            this.fEmployeeProfile1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fEmployeeProfile1.Location = new System.Drawing.Point(195, 0);
+            this.fEmployeeProfile1.Margin = new System.Windows.Forms.Padding(4);
             this.fEmployeeProfile1.Name = "fEmployeeProfile1";
             this.fEmployeeProfile1.Size = new System.Drawing.Size(688, 461);
             this.fEmployeeProfile1.TabIndex = 0;
             this.fEmployeeProfile1.Visible = false;
+            this.fEmployeeProfile1.Load += new System.EventHandler(this.fEmployeeProfile1_Load);
             // 
             // emailF1
             // 
             this.emailF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
             this.emailF1.Location = new System.Drawing.Point(195, 5);
-            this.emailF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailF1.Margin = new System.Windows.Forms.Padding(4);
             this.emailF1.Name = "emailF1";
             this.emailF1.Size = new System.Drawing.Size(688, 461);
             this.emailF1.TabIndex = 1;
@@ -152,7 +153,7 @@ namespace ClockIn
             // 
             this.hoursF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
             this.hoursF1.Location = new System.Drawing.Point(195, 0);
-            this.hoursF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hoursF1.Margin = new System.Windows.Forms.Padding(4);
             this.hoursF1.Name = "hoursF1";
             this.hoursF1.Size = new System.Drawing.Size(688, 461);
             this.hoursF1.TabIndex = 6;
