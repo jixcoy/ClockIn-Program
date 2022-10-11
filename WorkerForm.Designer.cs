@@ -36,7 +36,6 @@ namespace ClockIn
             this.hoursIconBtn = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.fEmployeeProfile1 = new ClockIn.FEmployeeProfile();
-            this.emailF1 = new ClockIn.EmailF();
             this.hoursF1 = new ClockIn.HoursF();
             this.workerLeftPanel.SuspendLayout();
             this.SuspendLayout();
@@ -140,15 +139,6 @@ namespace ClockIn
             this.fEmployeeProfile1.Visible = false;
             this.fEmployeeProfile1.Load += new System.EventHandler(this.fEmployeeProfile1_Load);
             // 
-            // emailF1
-            // 
-            this.emailF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.emailF1.Location = new System.Drawing.Point(195, 5);
-            this.emailF1.Margin = new System.Windows.Forms.Padding(4);
-            this.emailF1.Name = "emailF1";
-            this.emailF1.Size = new System.Drawing.Size(688, 461);
-            this.emailF1.TabIndex = 1;
-            // 
             // hoursF1
             // 
             this.hoursF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
@@ -166,7 +156,6 @@ namespace ClockIn
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.workerLeftPanel);
             this.Controls.Add(this.fEmployeeProfile1);
-            this.Controls.Add(this.emailF1);
             this.Controls.Add(this.hoursF1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -188,7 +177,6 @@ namespace ClockIn
         private FontAwesome.Sharp.IconButton hoursIconBtn;
         private System.Windows.Forms.Label clockInLabel;
         private FEmployeeProfile fEmployeeProfile1;
-        private EmailF emailF1;
         private HoursF hoursF1;
     }
 }

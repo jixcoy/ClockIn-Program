@@ -26,7 +26,6 @@ namespace ClockIn
         {
             // Hides all user controls on the form
             bossProfiel1.Hide();
-            bossEmail1.Hide();
             bossManageSchedule1.Hide();
             bossManageEmployees1.Hide();
         }
@@ -41,7 +40,6 @@ namespace ClockIn
         {
             // Shows Boss Email
             hideAllUserControls();
-            bossEmail1.Show();
         }
 
 

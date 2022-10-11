@@ -16,7 +16,6 @@ namespace ClockIn
         {
             // Hides all the user controls on the form
             fEmployeeProfile1.Hide();
-            emailF1.Hide();
             hoursF1.Hide();
         }
 
@@ -31,7 +30,6 @@ namespace ClockIn
         {
             // Show email
             hideAllUserControls();
-            emailF1.Show();
         }
 
         private void hoursIconBtn_Click(object sender, EventArgs e)

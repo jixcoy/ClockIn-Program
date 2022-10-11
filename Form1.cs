@@ -16,7 +16,6 @@ namespace ClockIn
         public Form1()
         {
             InitializeComponent();
-            FormManager.form1 = this;
         }
         public static string logInTb;
         private void logInBtn_Click(object sender, EventArgs e)
@@ -28,7 +27,6 @@ namespace ClockIn
             {
                 if (logInTb == employee.Id.ToString())
                 {
-                    FormManager.wform = worker;
                     this.Hide();
                     worker.ShowDialog();
                     this.Close();
@@ -37,7 +35,6 @@ namespace ClockIn
             if (logInTb == "boss")
             {
                 BossForm boss = new BossForm();
-                FormManager.bform = boss;
                 this.Hide();
                 boss.ShowDialog();
                 this.Close();

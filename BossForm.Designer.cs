@@ -40,7 +40,6 @@ namespace ClockIn
             this.bossManageEmployees1 = new ClockIn.BossManageEmployees();
             this.bossManageSchedule1 = new ClockIn.BossManageSchedule();
             this.bossProfiel1 = new ClockIn.BossProfiel();
-            this.bossEmail1 = new ClockIn.BossEmail();
             this.panel1.SuspendLayout();
             this.workerLeftPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -173,7 +172,6 @@ namespace ClockIn
             this.panel2.Controls.Add(this.bossManageEmployees1);
             this.panel2.Controls.Add(this.bossManageSchedule1);
             this.panel2.Controls.Add(this.bossProfiel1);
-            this.panel2.Controls.Add(this.bossEmail1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(197, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -208,16 +206,6 @@ namespace ClockIn
             this.bossProfiel1.Size = new System.Drawing.Size(687, 461);
             this.bossProfiel1.TabIndex = 1;
             // 
-            // bossEmail1
-            // 
-            this.bossEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.bossEmail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bossEmail1.Location = new System.Drawing.Point(0, 0);
-            this.bossEmail1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bossEmail1.Name = "bossEmail1";
-            this.bossEmail1.Size = new System.Drawing.Size(687, 461);
-            this.bossEmail1.TabIndex = 0;
-            // 
             // BossForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +234,6 @@ namespace ClockIn
         private FontAwesome.Sharp.IconButton profileIconButton;
         private FontAwesome.Sharp.IconButton ManageScheduleBtn;
         private System.Windows.Forms.Panel panel2;
-        private BossEmail bossEmail1;
         private BossManageEmployees bossManageEmployees1;
         private BossManageSchedule bossManageSchedule1;
         private BossProfiel bossProfiel1;
