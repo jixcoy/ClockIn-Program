@@ -10,5 +10,6 @@ namespace ClockIn
     {
         public static Form1 form1;
         public static WorkerForm wform;
+        public static BossForm bform;
     }
 }

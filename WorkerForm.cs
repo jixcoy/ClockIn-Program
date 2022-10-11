@@ -8,8 +8,6 @@ namespace ClockIn
         public WorkerForm()
         {
             InitializeComponent();
-            FormManager.wform = this;
-
             // Sets Clock in logo to the top
             workerLeftPanel.Controls.SetChildIndex(clockInLabel, 5);
         }

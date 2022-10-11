@@ -35,13 +35,12 @@ namespace ClockIn
             this.clockInLabel = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Button();
             this.ManageEmployeesBtn = new FontAwesome.Sharp.IconButton();
-            this.emailIconBtn = new FontAwesome.Sharp.IconButton();
             this.profileIconButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bossEmail1 = new ClockIn.BossEmail();
-            this.bossProfiel1 = new ClockIn.BossProfiel();
-            this.bossManageSchedule1 = new ClockIn.BossManageSchedule();
             this.bossManageEmployees1 = new ClockIn.BossManageEmployees();
+            this.bossManageSchedule1 = new ClockIn.BossManageSchedule();
+            this.bossProfiel1 = new ClockIn.BossProfiel();
+            this.bossEmail1 = new ClockIn.BossEmail();
             this.panel1.SuspendLayout();
             this.workerLeftPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,8 +51,9 @@ namespace ClockIn
             this.panel1.Controls.Add(this.workerLeftPanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 567);
+            this.panel1.Size = new System.Drawing.Size(197, 461);
             this.panel1.TabIndex = 0;
             // 
             // workerLeftPanel
@@ -64,13 +64,11 @@ namespace ClockIn
             this.workerLeftPanel.Controls.Add(this.clockInLabel);
             this.workerLeftPanel.Controls.Add(this.logOutBtn);
             this.workerLeftPanel.Controls.Add(this.ManageEmployeesBtn);
-            this.workerLeftPanel.Controls.Add(this.emailIconBtn);
             this.workerLeftPanel.Controls.Add(this.profileIconButton);
             this.workerLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.workerLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.workerLeftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.workerLeftPanel.Name = "workerLeftPanel";
-            this.workerLeftPanel.Size = new System.Drawing.Size(263, 567);
+            this.workerLeftPanel.Size = new System.Drawing.Size(198, 461);
             this.workerLeftPanel.TabIndex = 1;
             // 
             // ManageScheduleBtn
@@ -86,10 +84,9 @@ namespace ClockIn
             this.ManageScheduleBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ManageScheduleBtn.IconSize = 30;
             this.ManageScheduleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ManageScheduleBtn.Location = new System.Drawing.Point(0, 471);
-            this.ManageScheduleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageScheduleBtn.Location = new System.Drawing.Point(0, 369);
             this.ManageScheduleBtn.Name = "ManageScheduleBtn";
-            this.ManageScheduleBtn.Size = new System.Drawing.Size(261, 95);
+            this.ManageScheduleBtn.Size = new System.Drawing.Size(196, 93);
             this.ManageScheduleBtn.TabIndex = 6;
             this.ManageScheduleBtn.Text = "Manage Schedule";
             this.ManageScheduleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -103,10 +100,9 @@ namespace ClockIn
             this.clockInLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.clockInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clockInLabel.ForeColor = System.Drawing.Color.White;
-            this.clockInLabel.Location = new System.Drawing.Point(0, 380);
-            this.clockInLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clockInLabel.Location = new System.Drawing.Point(0, 279);
             this.clockInLabel.Name = "clockInLabel";
-            this.clockInLabel.Size = new System.Drawing.Size(261, 91);
+            this.clockInLabel.Size = new System.Drawing.Size(196, 90);
             this.clockInLabel.TabIndex = 1;
             this.clockInLabel.Text = "Clock In";
             this.clockInLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,10 +115,9 @@ namespace ClockIn
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(0, 285);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logOutBtn.Location = new System.Drawing.Point(0, 186);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(261, 95);
+            this.logOutBtn.Size = new System.Drawing.Size(196, 93);
             this.logOutBtn.TabIndex = 5;
             this.logOutBtn.Text = "Log Out";
             this.logOutBtn.UseVisualStyleBackColor = false;
@@ -141,38 +136,14 @@ namespace ClockIn
             this.ManageEmployeesBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.ManageEmployeesBtn.IconSize = 30;
             this.ManageEmployeesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ManageEmployeesBtn.Location = new System.Drawing.Point(0, 190);
-            this.ManageEmployeesBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ManageEmployeesBtn.Location = new System.Drawing.Point(0, 93);
             this.ManageEmployeesBtn.Name = "ManageEmployeesBtn";
-            this.ManageEmployeesBtn.Size = new System.Drawing.Size(261, 95);
+            this.ManageEmployeesBtn.Size = new System.Drawing.Size(196, 93);
             this.ManageEmployeesBtn.TabIndex = 4;
             this.ManageEmployeesBtn.Text = "Manage Employees";
             this.ManageEmployeesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ManageEmployeesBtn.UseVisualStyleBackColor = false;
             this.ManageEmployeesBtn.Click += new System.EventHandler(this.ManageEmployeesBtn_Click);
-            // 
-            // emailIconBtn
-            // 
-            this.emailIconBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.emailIconBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.emailIconBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.emailIconBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emailIconBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailIconBtn.ForeColor = System.Drawing.Color.White;
-            this.emailIconBtn.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.emailIconBtn.IconColor = System.Drawing.Color.White;
-            this.emailIconBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.emailIconBtn.IconSize = 30;
-            this.emailIconBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.emailIconBtn.Location = new System.Drawing.Point(0, 95);
-            this.emailIconBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.emailIconBtn.Name = "emailIconBtn";
-            this.emailIconBtn.Size = new System.Drawing.Size(261, 95);
-            this.emailIconBtn.TabIndex = 3;
-            this.emailIconBtn.Text = "Email";
-            this.emailIconBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.emailIconBtn.UseVisualStyleBackColor = false;
-            this.emailIconBtn.Click += new System.EventHandler(this.emailIconBtn_Click);
             // 
             // profileIconButton
             // 
@@ -188,9 +159,8 @@ namespace ClockIn
             this.profileIconButton.IconSize = 30;
             this.profileIconButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.profileIconButton.Location = new System.Drawing.Point(0, 0);
-            this.profileIconButton.Margin = new System.Windows.Forms.Padding(4);
             this.profileIconButton.Name = "profileIconButton";
-            this.profileIconButton.Size = new System.Drawing.Size(261, 95);
+            this.profileIconButton.Size = new System.Drawing.Size(196, 93);
             this.profileIconButton.TabIndex = 2;
             this.profileIconButton.Text = "Profile";
             this.profileIconButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,51 +174,57 @@ namespace ClockIn
             this.panel2.Controls.Add(this.bossProfiel1);
             this.panel2.Controls.Add(this.bossEmail1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(263, 0);
+            this.panel2.Location = new System.Drawing.Point(197, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(916, 567);
+            this.panel2.Size = new System.Drawing.Size(687, 461);
             this.panel2.TabIndex = 2;
+            // 
+            // bossManageEmployees1
+            // 
+            this.bossManageEmployees1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossManageEmployees1.Location = new System.Drawing.Point(0, 0);
+            this.bossManageEmployees1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bossManageEmployees1.Name = "bossManageEmployees1";
+            this.bossManageEmployees1.Size = new System.Drawing.Size(687, 461);
+            this.bossManageEmployees1.TabIndex = 3;
+            // 
+            // bossManageSchedule1
+            // 
+            this.bossManageSchedule1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossManageSchedule1.Location = new System.Drawing.Point(0, 0);
+            this.bossManageSchedule1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bossManageSchedule1.Name = "bossManageSchedule1";
+            this.bossManageSchedule1.Size = new System.Drawing.Size(687, 461);
+            this.bossManageSchedule1.TabIndex = 2;
+            // 
+            // bossProfiel1
+            // 
+            this.bossProfiel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
+            this.bossProfiel1.Location = new System.Drawing.Point(0, 0);
+            this.bossProfiel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bossProfiel1.Name = "bossProfiel1";
+            this.bossProfiel1.Size = new System.Drawing.Size(687, 461);
+            this.bossProfiel1.TabIndex = 1;
             // 
             // bossEmail1
             // 
             this.bossEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
             this.bossEmail1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bossEmail1.Location = new System.Drawing.Point(0, 0);
+            this.bossEmail1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bossEmail1.Name = "bossEmail1";
-            this.bossEmail1.Size = new System.Drawing.Size(916, 567);
+            this.bossEmail1.Size = new System.Drawing.Size(687, 461);
             this.bossEmail1.TabIndex = 0;
-            // 
-            // bossProfiel1
-            // 
-            this.bossProfiel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.bossProfiel1.Location = new System.Drawing.Point(0, 0);
-            this.bossProfiel1.Name = "bossProfiel1";
-            this.bossProfiel1.Size = new System.Drawing.Size(916, 567);
-            this.bossProfiel1.TabIndex = 1;
-            // 
-            // bossManageSchedule1
-            // 
-            this.bossManageSchedule1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.bossManageSchedule1.Location = new System.Drawing.Point(0, 0);
-            this.bossManageSchedule1.Name = "bossManageSchedule1";
-            this.bossManageSchedule1.Size = new System.Drawing.Size(916, 567);
-            this.bossManageSchedule1.TabIndex = 2;
-            // 
-            // bossManageEmployees1
-            // 
-            this.bossManageEmployees1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.bossManageEmployees1.Location = new System.Drawing.Point(0, 0);
-            this.bossManageEmployees1.Name = "bossManageEmployees1";
-            this.bossManageEmployees1.Size = new System.Drawing.Size(916, 567);
-            this.bossManageEmployees1.TabIndex = 3;
             // 
             // BossForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 567);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BossForm";
             this.Text = "BossForm";
             this.Load += new System.EventHandler(this.BossForm_Load);
@@ -266,7 +242,6 @@ namespace ClockIn
         private System.Windows.Forms.Label clockInLabel;
         private System.Windows.Forms.Button logOutBtn;
         private FontAwesome.Sharp.IconButton ManageEmployeesBtn;
-        private FontAwesome.Sharp.IconButton emailIconBtn;
         private FontAwesome.Sharp.IconButton profileIconButton;
         private FontAwesome.Sharp.IconButton ManageScheduleBtn;
         private System.Windows.Forms.Panel panel2;

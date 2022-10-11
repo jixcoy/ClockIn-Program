@@ -28,6 +28,7 @@ namespace ClockIn
                 if (logInTb == employee.Id.ToString())
                 {
                     WorkerForm worker = new WorkerForm();
+                    FormManager.wform = worker;
                     this.Hide();
                     worker.ShowDialog();
                 }
@@ -35,6 +36,7 @@ namespace ClockIn
             if (logInTb == "boss")
             {
                 BossForm boss = new BossForm();
+                FormManager.bform = boss;
                 this.Hide();
                 boss.ShowDialog();
             }
