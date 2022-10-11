@@ -35,11 +35,6 @@ namespace ClockIn
             EnterHours();
             HideAllAdd();
         }
-
-        private void customTB3_Load(object sender, EventArgs e)
-        {
-
-        }
         private void HideAllAdd()
         {
             hoursTB.Hide();
@@ -47,6 +42,10 @@ namespace ClockIn
             shiftTB.Hide();
             cancelBtn.Hide();
             enterBtn.Hide();
+
+            hoursTB.Texts = "Hours";
+            dateTB.Texts = "Date";
+            shiftTB.Texts = "Shift";
         }
         private void addHoursBtn_Click(object sender, EventArgs e)
         {
@@ -56,9 +55,27 @@ namespace ClockIn
             cancelBtn.Show();
             enterBtn.Show();
         }
-
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            HideAllAdd();
+        }
+
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
+            // Creates new employee object and adds to database
+            Employee newEmployee = new Employee();
+            newEmployee.Hours = hoursTB.Texts;
+            newEmployee.Date = dateTB.Texts;
+            newEmployee.Shift = shiftTB.Texts;
+            newEmployee.Id = Convert.ToInt32(Form1.logInTb);
+            newEmployee.Role = Form1.role;
+            newEmployee.Name = Form1.name;
+
+            // Saves employee to data base and reloads data table
+            DBAccess.SaveHours(newEmployee);
+            employees = DBAccess.LoadEmployees();
+            EnterHours();
+
             HideAllAdd();
         }
     }

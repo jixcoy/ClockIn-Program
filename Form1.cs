@@ -18,6 +18,8 @@ namespace ClockIn
             InitializeComponent();
         }
         public static string logInTb;
+        public static string role;
+        public static string name;
         private void logInBtn_Click(object sender, EventArgs e)
         {
             employees = DBAccess.LoadEmployees();
@@ -27,6 +29,8 @@ namespace ClockIn
             {
                 if (logInTb == employee.Id.ToString())
                 {
+                    role = employee.Role;
+                    name = employee.Name;
                     this.Hide();
                     worker.ShowDialog();
                     this.Close();

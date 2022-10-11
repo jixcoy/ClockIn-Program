@@ -42,7 +42,7 @@ namespace ClockIn
             // NOT DONE
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute($"INSERT INTO \"main\".\"Hours\"(\"Hours\",\"Date\",\"Name\",\"ID\",\"Role\",\"Shift\") VALUES ();");
+                cnn.Execute($"INSERT INTO \"main\".\"Hours\"(\"Hours\",\"Date\",\"Name\",\"ID\",\"Role\",\"Shift\") VALUES (\"{emp.Hours}\", \"{emp.Date}\", \"{emp.Name}\", \"{emp.Id}\", \"{emp.Role}\", \"{emp.Shift}\");");
             }
         }
         public static void DeleteEmployee(Employee emp)

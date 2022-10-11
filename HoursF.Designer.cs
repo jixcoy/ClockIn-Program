@@ -29,17 +29,17 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HoursDtb = new System.Windows.Forms.DataGridView();
             this.addHoursBtn = new System.Windows.Forms.Button();
-            this.hoursTB = new ClockIn.CustomTB();
-            this.dateTB = new ClockIn.CustomTB();
-            this.shiftTB = new ClockIn.CustomTB();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.enterBtn = new System.Windows.Forms.Button();
+            this.shiftTB = new ClockIn.CustomTB();
+            this.dateTB = new ClockIn.CustomTB();
+            this.hoursTB = new ClockIn.CustomTB();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoursDtb)).BeginInit();
             this.SuspendLayout();
@@ -74,23 +74,23 @@ namespace ClockIn
             this.HoursDtb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.HoursDtb.BackgroundColor = System.Drawing.Color.White;
             this.HoursDtb.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.HoursDtb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle6;
             this.HoursDtb.Dock = System.Windows.Forms.DockStyle.Top;
             this.HoursDtb.Location = new System.Drawing.Point(0, 100);
             this.HoursDtb.Margin = new System.Windows.Forms.Padding(2);
@@ -112,33 +112,6 @@ namespace ClockIn
             this.addHoursBtn.UseVisualStyleBackColor = true;
             this.addHoursBtn.Click += new System.EventHandler(this.addHoursBtn_Click);
             // 
-            // hoursTB
-            // 
-            this.hoursTB.Location = new System.Drawing.Point(19, 385);
-            this.hoursTB.Name = "hoursTB";
-            this.hoursTB.Size = new System.Drawing.Size(209, 25);
-            this.hoursTB.TabIndex = 5;
-            this.hoursTB.Texts = "Text";
-            this.hoursTB.Visible = false;
-            // 
-            // dateTB
-            // 
-            this.dateTB.Location = new System.Drawing.Point(234, 385);
-            this.dateTB.Name = "dateTB";
-            this.dateTB.Size = new System.Drawing.Size(209, 25);
-            this.dateTB.TabIndex = 6;
-            this.dateTB.Texts = "Text";
-            this.dateTB.Visible = false;
-            // 
-            // shiftTB
-            // 
-            this.shiftTB.Location = new System.Drawing.Point(449, 385);
-            this.shiftTB.Name = "shiftTB";
-            this.shiftTB.Size = new System.Drawing.Size(209, 25);
-            this.shiftTB.TabIndex = 7;
-            this.shiftTB.Texts = "Text";
-            this.shiftTB.Visible = false;
-            // 
             // cancelBtn
             // 
             this.cancelBtn.Location = new System.Drawing.Point(234, 416);
@@ -157,6 +130,34 @@ namespace ClockIn
             this.enterBtn.TabIndex = 9;
             this.enterBtn.Text = "Enter";
             this.enterBtn.UseVisualStyleBackColor = true;
+            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
+            // 
+            // shiftTB
+            // 
+            this.shiftTB.Location = new System.Drawing.Point(449, 385);
+            this.shiftTB.Name = "shiftTB";
+            this.shiftTB.Size = new System.Drawing.Size(209, 25);
+            this.shiftTB.TabIndex = 7;
+            this.shiftTB.Texts = "Text";
+            this.shiftTB.Visible = false;
+            // 
+            // dateTB
+            // 
+            this.dateTB.Location = new System.Drawing.Point(234, 385);
+            this.dateTB.Name = "dateTB";
+            this.dateTB.Size = new System.Drawing.Size(209, 25);
+            this.dateTB.TabIndex = 6;
+            this.dateTB.Texts = "Text";
+            this.dateTB.Visible = false;
+            // 
+            // hoursTB
+            // 
+            this.hoursTB.Location = new System.Drawing.Point(19, 385);
+            this.hoursTB.Name = "hoursTB";
+            this.hoursTB.Size = new System.Drawing.Size(209, 25);
+            this.hoursTB.TabIndex = 5;
+            this.hoursTB.Texts = "Text";
+            this.hoursTB.Visible = false;
             // 
             // HoursF
             // 
