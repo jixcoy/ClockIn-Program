@@ -48,6 +48,9 @@ namespace ClockIn
         private void logOutBtn_Click(object sender, EventArgs e)
         {
             // LOG OUT
+            //Log out
+            this.Hide();
+            FormManager.form1.Show();
         }
 
         private void ManageScheduleBtn_Click(object sender, EventArgs e)
@@ -69,6 +72,11 @@ namespace ClockIn
             // Shows Manage Employees
             hideAllUserControls();
             bossManageEmployees1.Show();
+        }
+
+        private void clockInLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

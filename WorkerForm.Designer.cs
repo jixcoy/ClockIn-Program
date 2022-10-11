@@ -34,7 +34,6 @@ namespace ClockIn
             this.clockInLabel = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Button();
             this.hoursIconBtn = new FontAwesome.Sharp.IconButton();
-            this.emailIconBtn = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.fEmployeeProfile1 = new ClockIn.FEmployeeProfile();
             this.emailF1 = new ClockIn.EmailF();
@@ -49,13 +48,11 @@ namespace ClockIn
             this.workerLeftPanel.Controls.Add(this.clockInLabel);
             this.workerLeftPanel.Controls.Add(this.logOutBtn);
             this.workerLeftPanel.Controls.Add(this.hoursIconBtn);
-            this.workerLeftPanel.Controls.Add(this.emailIconBtn);
             this.workerLeftPanel.Controls.Add(this.iconButton1);
             this.workerLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.workerLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.workerLeftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.workerLeftPanel.Name = "workerLeftPanel";
-            this.workerLeftPanel.Size = new System.Drawing.Size(263, 567);
+            this.workerLeftPanel.Size = new System.Drawing.Size(198, 461);
             this.workerLeftPanel.TabIndex = 0;
             // 
             // clockInLabel
@@ -65,10 +62,9 @@ namespace ClockIn
             this.clockInLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.clockInLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clockInLabel.ForeColor = System.Drawing.Color.White;
-            this.clockInLabel.Location = new System.Drawing.Point(0, 456);
-            this.clockInLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.clockInLabel.Location = new System.Drawing.Point(0, 345);
             this.clockInLabel.Name = "clockInLabel";
-            this.clockInLabel.Size = new System.Drawing.Size(261, 114);
+            this.clockInLabel.Size = new System.Drawing.Size(196, 115);
             this.clockInLabel.TabIndex = 1;
             this.clockInLabel.Text = "Clock In";
             this.clockInLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,14 +77,13 @@ namespace ClockIn
             this.logOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(0, 342);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOutBtn.Location = new System.Drawing.Point(0, 230);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(261, 114);
+            this.logOutBtn.Size = new System.Drawing.Size(196, 115);
             this.logOutBtn.TabIndex = 5;
             this.logOutBtn.Text = "Log Out";
             this.logOutBtn.UseVisualStyleBackColor = false;
-            this.logOutBtn.Click += new System.EventHandler(this.button1_Click);
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // hoursIconBtn
             // 
@@ -103,38 +98,14 @@ namespace ClockIn
             this.hoursIconBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.hoursIconBtn.IconSize = 30;
             this.hoursIconBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.hoursIconBtn.Location = new System.Drawing.Point(0, 228);
-            this.hoursIconBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hoursIconBtn.Location = new System.Drawing.Point(0, 115);
             this.hoursIconBtn.Name = "hoursIconBtn";
-            this.hoursIconBtn.Size = new System.Drawing.Size(261, 114);
+            this.hoursIconBtn.Size = new System.Drawing.Size(196, 115);
             this.hoursIconBtn.TabIndex = 4;
             this.hoursIconBtn.Text = "Hours and Schedule";
             this.hoursIconBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.hoursIconBtn.UseVisualStyleBackColor = false;
             this.hoursIconBtn.Click += new System.EventHandler(this.hoursIconBtn_Click);
-            // 
-            // emailIconBtn
-            // 
-            this.emailIconBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.emailIconBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.emailIconBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.emailIconBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emailIconBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailIconBtn.ForeColor = System.Drawing.Color.White;
-            this.emailIconBtn.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.emailIconBtn.IconColor = System.Drawing.Color.White;
-            this.emailIconBtn.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.emailIconBtn.IconSize = 30;
-            this.emailIconBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.emailIconBtn.Location = new System.Drawing.Point(0, 114);
-            this.emailIconBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.emailIconBtn.Name = "emailIconBtn";
-            this.emailIconBtn.Size = new System.Drawing.Size(261, 114);
-            this.emailIconBtn.TabIndex = 3;
-            this.emailIconBtn.Text = "Email";
-            this.emailIconBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.emailIconBtn.UseVisualStyleBackColor = false;
-            this.emailIconBtn.Click += new System.EventHandler(this.emailIconBtn_Click);
             // 
             // iconButton1
             // 
@@ -150,9 +121,8 @@ namespace ClockIn
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(261, 114);
+            this.iconButton1.Size = new System.Drawing.Size(196, 115);
             this.iconButton1.TabIndex = 2;
             this.iconButton1.Text = "Profile";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -162,38 +132,37 @@ namespace ClockIn
             // fEmployeeProfile1
             // 
             this.fEmployeeProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.fEmployeeProfile1.Location = new System.Drawing.Point(260, 1);
-            this.fEmployeeProfile1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.fEmployeeProfile1.Location = new System.Drawing.Point(195, 1);
+            this.fEmployeeProfile1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fEmployeeProfile1.Name = "fEmployeeProfile1";
-            this.fEmployeeProfile1.Size = new System.Drawing.Size(917, 567);
+            this.fEmployeeProfile1.Size = new System.Drawing.Size(688, 461);
             this.fEmployeeProfile1.TabIndex = 0;
             this.fEmployeeProfile1.Visible = false;
-            this.fEmployeeProfile1.Load += new System.EventHandler(this.fEmployeeProfile1_Load);
             // 
             // emailF1
             // 
             this.emailF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.emailF1.Location = new System.Drawing.Point(260, 6);
-            this.emailF1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.emailF1.Location = new System.Drawing.Point(195, 5);
+            this.emailF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.emailF1.Name = "emailF1";
-            this.emailF1.Size = new System.Drawing.Size(917, 567);
+            this.emailF1.Size = new System.Drawing.Size(688, 461);
             this.emailF1.TabIndex = 1;
             // 
             // hoursF1
             // 
             this.hoursF1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.hoursF1.Location = new System.Drawing.Point(260, 0);
-            this.hoursF1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.hoursF1.Location = new System.Drawing.Point(195, 0);
+            this.hoursF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hoursF1.Name = "hoursF1";
-            this.hoursF1.Size = new System.Drawing.Size(917, 567);
+            this.hoursF1.Size = new System.Drawing.Size(688, 461);
             this.hoursF1.TabIndex = 6;
             // 
             // WorkerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.ClientSize = new System.Drawing.Size(1179, 567);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.workerLeftPanel);
             this.Controls.Add(this.fEmployeeProfile1);
             this.Controls.Add(this.emailF1);
@@ -201,7 +170,6 @@ namespace ClockIn
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(31)))), ((int)(((byte)(43)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "WorkerForm";
             this.Text = "Clock In Employee";
@@ -217,7 +185,6 @@ namespace ClockIn
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Button logOutBtn;
         private FontAwesome.Sharp.IconButton hoursIconBtn;
-        private FontAwesome.Sharp.IconButton emailIconBtn;
         private System.Windows.Forms.Label clockInLabel;
         private FEmployeeProfile fEmployeeProfile1;
         private EmailF emailF1;

@@ -20,14 +20,6 @@ namespace ClockIn
             hoursF1.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Log out
-            this.Hide();
-            FormManager.form1.Show();
-
-        }
-
         private void iconButton1_Click(object sender, EventArgs e)
         {
             // Show profile
@@ -58,10 +50,11 @@ namespace ClockIn
 
         }
 
-        private void fEmployeeProfile1_Load(object sender, EventArgs e)
+        private void logOutBtn_Click(object sender, EventArgs e)
         {
-
+            //Log out
+            this.Hide();
+            FormManager.form1.Show();
         }
-            
     }
 }

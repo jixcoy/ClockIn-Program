@@ -106,6 +106,7 @@ namespace ClockIn
             this.clockInLabel.TabIndex = 1;
             this.clockInLabel.Text = "Clock In";
             this.clockInLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clockInLabel.Click += new System.EventHandler(this.clockInLabel_Click);
             // 
             // logOutBtn
             // 
