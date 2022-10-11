@@ -18,22 +18,48 @@ namespace ClockIn
             {
                 employees = DBAccess.LoadEmployees();
             }
-            catch(Exception exc)
+            catch(Exception)
             {
                 Employee newEmployee = new Employee();
                 employees.Add(newEmployee);
             }
         }
-
+        private void EnterHours()
+        {
+            HoursDtb.DataSource = employees
+                .Where(i => Form1.logInTb == i.Id.ToString())
+                .Select(i => new { i.Hours, i.Date, i.Shift}).ToList();
+        }
         private void HoursF_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = employees
-                .Where(i => Form1.logInTb == i.Id.ToString())
-                .Select(i => new { i.Hours, i.Date }).ToList();
+            EnterHours();
+            HideAllAdd();
+        }
 
-            dataGridView2.DataSource = employees
-                .Where(i => Form1.logInTb == i.Id.ToString())
-                .Select(i => new { i.Shift, i.Date }).ToList();
+        private void customTB3_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void HideAllAdd()
+        {
+            hoursTB.Hide();
+            dateTB.Hide();
+            shiftTB.Hide();
+            cancelBtn.Hide();
+            enterBtn.Hide();
+        }
+        private void addHoursBtn_Click(object sender, EventArgs e)
+        {
+            hoursTB.Show();
+            dateTB.Show();
+            shiftTB.Show();
+            cancelBtn.Show();
+            enterBtn.Show();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            HideAllAdd();
         }
     }
 }
