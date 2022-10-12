@@ -15,6 +15,5 @@ namespace ClockIn
         public string Role { get; set; } = "Employee";
         public string Shift { get; set; } = "1rst";
         public string Pay { get; set; } = "$0.00";
-        public string Rating { get; set; } = "0";
     }
 }

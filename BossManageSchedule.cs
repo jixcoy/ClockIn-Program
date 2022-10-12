@@ -81,5 +81,12 @@ namespace ClockIn
             EnterStats();
             HideAllEdits();
         }
+
+        public void refresh(object sender, EventArgs e)
+        {
+            employees = DBAccess.LoadStats();
+            EnterStats();
+        }
     }
+
 }

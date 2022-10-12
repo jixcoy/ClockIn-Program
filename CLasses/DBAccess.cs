@@ -30,10 +30,12 @@ namespace ClockIn
         }
         public static void SaveEmployee(Employee emp)
         {
-            // Saves a new employee to Stats data table
+            // Saves a new employee to Stats and hours Data table
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute($"INSERT INTO \"main\".\"Stats\"(\"Name\",\"Shift\",\"Rating\",\"Pay\",\"Id\", \"Role\") VALUES (\"{emp.Name}\", \"{emp.Shift}\", \"{emp.Rating}\", \"{emp.Pay}\", \"{emp.Id}\", \"{emp.Role}\");");
+                cnn.Execute($"INSERT INTO \"main\".\"Stats\"(\"Name\",\"Shift\",\"Pay\",\"Id\", \"Role\") VALUES (\"{emp.Name}\", \"{emp.Shift}\", \"{emp.Pay}\", \"{emp.Id}\", \"{emp.Role}\");");
+                cnn.Execute($"INSERT INTO \"main\".\"Hours\"(\"Hours\",\"Date\",\"Name\",\"Id\", \"Role\", \"Shift\") VALUES (\"{emp.Hours}\", \"{emp.Date}\", \"{emp.Name}\", \"{emp.Id}\", \"{emp.Role}\", \"{emp.Shift}\");");
+
             }
         }
         public static void SaveHours(Employee emp)
@@ -50,7 +52,8 @@ namespace ClockIn
             // Saves new hour entry to Hours data table
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute($"DELETE FROM \"main\".\"Stats\" WHERE Name=\"{emp.Name}\"");
+                cnn.Execute($"DELETE FROM \"main\".\"Stats\" WHERE Id=\"{emp.Id}\"");
+                cnn.Execute($"DELETE FROM \"main\".\"Hours\" WHERE Id=\"{emp.Id}\"");
             }
         }
         public static void ChangeSchedule(Employee emp, string newShift, string newRole)

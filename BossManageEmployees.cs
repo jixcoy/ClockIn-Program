@@ -29,7 +29,7 @@ namespace ClockIn
         private void EnterStats()
         {
             manageEmployeesDTbl.DataSource = employees
-                .Select(i => new { i.Name, i.Role, i.Rating, i.Pay }).ToList();
+                .Select(i => new { i.Name, i.Role, i.Pay }).ToList();
         }
         private void BossManageEmployees_Load(object sender, EventArgs e)
         {
@@ -86,6 +86,7 @@ namespace ClockIn
             newEmployee.Role = nRoleCustomTB.Texts;
             newEmployee.Pay = npayCustomTb.Texts;
 
+
             // Saves employee to data base and reloads data table
             DBAccess.SaveEmployee(newEmployee);
             employees = DBAccess.LoadStats();
@@ -96,6 +97,7 @@ namespace ClockIn
 
         private void removeEmpBtn_Click(object sender, EventArgs e)
         {
+            // Shows all remove Buttons
             removeCancelBtn.Show();
             removeConfirmTb.Show();
             removeEnterBtn.Show();
@@ -110,6 +112,7 @@ namespace ClockIn
 
         private void removeEnterBtn_Click(object sender, EventArgs e)
         {
+            // Removes Employee from Stats and Hours Datatables 
             if (removeConfirmTb.Texts.ToLower() == "yes")
             {
                 Employee removedEmployee = new Employee();

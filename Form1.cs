@@ -22,27 +22,30 @@ namespace ClockIn
         public static string name;
         private void logInBtn_Click(object sender, EventArgs e)
         {
-            employees = DBAccess.LoadEmployees();
+            employees = DBAccess.LoadStats();
             logInTb = textBox1.Text;
             WorkerForm worker = new WorkerForm();
+            BossForm boss = new BossForm();
             foreach (var employee in employees)
             {
                 if (logInTb == employee.Id.ToString())
                 {
-                    role = employee.Role;
-                    name = employee.Name;
-                    this.Hide();
-                    worker.ShowDialog();
-                    this.Close();
+                    if (employee.Role.ToLower() == "admin")
+                    {
+                        this.Hide();
+                        boss.ShowDialog();
+                        this.Close();
+                    } else
+                    {
+                        role = employee.Role;
+                        name = employee.Name;
+                        this.Hide();
+                        worker.ShowDialog();
+                        this.Close();
+                    }
                 }
             }
-            if (logInTb == "boss")
-            {
-                BossForm boss = new BossForm();
-                this.Hide();
-                boss.ShowDialog();
-                this.Close();
-            }
+
         }
         private void iconStartButton_Click(object sender, EventArgs e)
         {
