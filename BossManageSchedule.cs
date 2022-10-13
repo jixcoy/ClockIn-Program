@@ -40,11 +40,6 @@ namespace ClockIn
             editNameTB.Hide();
             editRoleTB.Hide();
             editShiftTB.Hide();
-
-            // Sets text to default value
-            editNameTB.Texts = "Name";
-            editRoleTB.Texts = "Role";
-            editShiftTB.Texts = "Shift";
         }
 
         private void editEnter_Click(object sender, EventArgs e)
@@ -102,6 +97,57 @@ namespace ClockIn
             employees = DBAccess.LoadStats();
             EnterStats();
             HideAllEdits();
+        }
+        
+        // Placeholder text enter
+        private void editNameTB_Enter(object sender, EventArgs e)
+        {
+            if (editNameTB.Texts == "Full Name")
+            {
+                editNameTB.Texts = "";
+            }
+        }
+
+        private void editShiftTB_Enter(object sender, EventArgs e)
+        {
+            if (editShiftTB.Texts == "Shift")
+            {
+                editShiftTB.Texts = "";
+            }
+        }
+
+        private void editRoleTB_Enter(object sender, EventArgs e)
+        {
+            if (editRoleTB.Texts == "Role")
+            {
+                editRoleTB.Texts = "";
+            }
+        }
+
+        // Placeholder text leave
+
+        private void editNameTB_Leave(object sender, EventArgs e)
+        {
+            if (editNameTB.Texts == "")
+            {
+                editNameTB.Texts = "Full Name";
+            }
+        }
+
+        private void editShiftTB_Leave(object sender, EventArgs e)
+        {
+            if (editShiftTB.Texts == "")
+            {
+                editShiftTB.Texts = "Shift";
+            }
+        }
+
+        private void editRoleTB_Leave(object sender, EventArgs e)
+        {
+            if (editRoleTB.Texts == "")
+            {
+                editRoleTB.Texts = "Role";
+            }
         }
     }
 
