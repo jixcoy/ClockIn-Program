@@ -56,8 +56,6 @@ namespace ClockIn
             REnterBtn.Hide();
             removeNameTb.Hide();
             removeConfirmTb.Hide();
-            removeNameTb.Texts = "Name";
-            removeConfirmTb.Texts = "Confirm? (Type \"Yes\" or \"No\")";
 
         }
 
