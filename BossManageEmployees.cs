@@ -28,6 +28,7 @@ namespace ClockIn
         }
         private void EnterStats()
         {
+            // Enters employee stats into data grid view
             manageEmployeesDTbl.DataSource = employees
                 .Select(i => new { i.Name, i.Role, i.Pay }).ToList();
         }
@@ -38,8 +39,31 @@ namespace ClockIn
             hideAddButtons();
         }
 
-        private void addEmpBtn_Click(object sender, EventArgs e)
+        private void hideAddButtons()
         {
+            nnameCustomTb.Hide();
+            nidCustomTb.Hide();
+            npayCustomTb.Hide();
+            nRoleCustomTB.Hide();
+            CancelButton.Hide();
+            EnterButton.Hide();
+        }
+        private void hideRemoveButtons()
+        {
+            // Hides all remove buttons and textboxes. Resets textboxs values
+            RCancelBtn.Hide();
+            removeConfirmTb.Hide();
+            REnterBtn.Hide();
+            removeNameTb.Hide();
+            removeConfirmTb.Hide();
+            removeNameTb.Texts = "Name";
+            removeConfirmTb.Texts = "Confirm? (Type \"Yes\" or \"No\")";
+
+        }
+
+        private void addEmployeeBtn_Click(object sender, EventArgs e)
+        {
+            // Shows all Employee add buttons and Textboxes
             nnameCustomTb.Show();
             nnameCustomTb.Texts = "Name";
             nidCustomTb.Show();
@@ -48,36 +72,11 @@ namespace ClockIn
             npayCustomTb.Texts = "Pay";
             nRoleCustomTB.Show();
             nRoleCustomTB.Texts = "Role";
-            cancelBtn.Show();
-            enterBtn.Show();
-        }
-        private void hideAddButtons()
-        {
-            nnameCustomTb.Hide();
-            nidCustomTb.Hide();
-            npayCustomTb.Hide();
-            nRoleCustomTB.Hide();
-            cancelBtn.Hide();
-            enterBtn.Hide();
-        }
-        private void hideRemoveButtons()
-        {
-            // Hides all remove buttons and textboxes. Resets textboxs values
-            removeCancelBtn.Hide();
-            removeConfirmTb.Hide();
-            removeEnterBtn.Hide();
-            removeNameTb.Hide();
-            removeConfirmTb.Hide();
-            removeNameTb.Texts = "Name";
-            removeConfirmTb.Texts = "Confirm? (Type \"Yes\" or \"No\")";
-
-        }
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            hideAddButtons();
+            CancelButton.Show();
+            EnterButton.Show();
         }
 
-        private void enterBtn_Click(object sender, EventArgs e)
+        private void EnterButton_Click(object sender, EventArgs e)
         {
             // Creates new employee object and adds to database
             Employee newEmployee = new Employee();
@@ -95,22 +94,17 @@ namespace ClockIn
             hideAddButtons();
         }
 
-        private void removeEmpBtn_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-            // Shows all remove Buttons
-            removeCancelBtn.Show();
-            removeConfirmTb.Show();
-            removeEnterBtn.Show();
-            removeNameTb.Show();
-            removeConfirmTb.Show();
+            hideAddButtons();
         }
 
-        private void removeCancelBtn_Click(object sender, EventArgs e)
+        private void RCancelBtn_Click(object sender, EventArgs e)
         {
             hideRemoveButtons();
         }
 
-        private void removeEnterBtn_Click(object sender, EventArgs e)
+        private void REnterBtn_Click(object sender, EventArgs e)
         {
             // Removes Employee from Stats and Hours Datatables 
             if (removeConfirmTb.Texts.ToLower() == "yes")
@@ -123,8 +117,19 @@ namespace ClockIn
                 employees = DBAccess.LoadStats();
                 EnterStats();
                 hideRemoveButtons();
-            } else
+            }
+            else
                 hideRemoveButtons();
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            // Shows all remove Buttons
+            RCancelBtn.Show();
+            removeConfirmTb.Show();
+            REnterBtn.Show();
+            removeNameTb.Show();
+            removeConfirmTb.Show();
         }
     }
 }
