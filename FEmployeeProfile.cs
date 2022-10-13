@@ -33,8 +33,8 @@ namespace ClockIn
 
         private void FEmployeeProfile_Load(object sender, EventArgs e)
         {
-            // Sets username and role labels to respective value
             EnterHours();
+            // Sets username and role labels to respective value
             var lol = employees
                 .Where(i => i.Id.ToString() == Form1.logInTb)
                 .Select(i => new {i.Name, i.Role}).ToList();

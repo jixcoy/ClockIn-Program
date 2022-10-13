@@ -39,23 +39,23 @@ namespace ClockIn
             // 
             this.RoleLabel.AutoSize = true;
             this.RoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoleLabel.Location = new System.Drawing.Point(211, 174);
+            this.RoleLabel.Location = new System.Drawing.Point(436, 283);
             this.RoleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Size = new System.Drawing.Size(114, 29);
+            this.RoleLabel.Size = new System.Drawing.Size(65, 29);
             this.RoleLabel.TabIndex = 7;
-            this.RoleLabel.Text = "Big Boss";
+            this.RoleLabel.Text = "Role";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(211, 124);
+            this.UserNameLabel.Location = new System.Drawing.Point(436, 245);
             this.UserNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(60, 29);
+            this.UserNameLabel.Size = new System.Drawing.Size(134, 29);
             this.UserNameLabel.TabIndex = 4;
-            this.UserNameLabel.Text = "God";
+            this.UserNameLabel.Text = "UserName";
             // 
             // BossUserIcn
             // 
@@ -64,7 +64,7 @@ namespace ClockIn
             this.BossUserIcn.IconColor = System.Drawing.Color.White;
             this.BossUserIcn.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.BossUserIcn.IconSize = 94;
-            this.BossUserIcn.Location = new System.Drawing.Point(104, 111);
+            this.BossUserIcn.Location = new System.Drawing.Point(329, 230);
             this.BossUserIcn.Margin = new System.Windows.Forms.Padding(4);
             this.BossUserIcn.Name = "BossUserIcn";
             this.BossUserIcn.Size = new System.Drawing.Size(99, 94);
@@ -81,6 +81,7 @@ namespace ClockIn
             this.Controls.Add(this.BossUserIcn);
             this.Name = "BossProfiel";
             this.Size = new System.Drawing.Size(908, 567);
+            this.Load += new System.EventHandler(this.BossProfiel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BossUserIcn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
