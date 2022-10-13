@@ -24,17 +24,20 @@ namespace ClockIn
                 employees.Add(newEmployee);
             }
         }
+
         private void EnterHours()
         {
             HoursDtb.DataSource = employees
                 .Where(i => Form1.logInTb == i.Id.ToString())
                 .Select(i => new { i.Hours, i.Date, i.Shift}).ToList();
         }
+
         private void HoursF_Load(object sender, EventArgs e)
         {
             EnterHours();
             HideAllAdd();
         }
+
         private void HideAllAdd()
         {
             hoursTB.Hide();
@@ -42,23 +45,6 @@ namespace ClockIn
             shiftTB.Hide();
             CancelButton.Hide();
             EnterButton.Hide();
-
-            hoursTB.Texts = "Hours";
-            dateTB.Texts = "Date";
-            shiftTB.Texts = "Shift";
-        }
-        private void addHoursBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void enterBtn_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -92,6 +78,56 @@ namespace ClockIn
             EnterHours();
 
             HideAllAdd();
+        }
+
+        // Placeholder Text Enter
+
+        private void hoursTB_Enter(object sender, EventArgs e)
+        {
+            if (hoursTB.Texts == "Hours (number)")
+            {
+                hoursTB.Texts = "";
+            }
+        }
+
+        private void dateTB_Enter(object sender, EventArgs e)
+        {
+            if (dateTB.Texts == "mm/dd/yyyy")
+            {
+                dateTB.Texts = "";
+            }
+        }
+
+        private void shiftTB_Enter(object sender, EventArgs e)
+        {
+            if (shiftTB.Texts == "Shift")
+            {
+                shiftTB.Texts = "";
+            }
+        }
+
+        private void hoursTB_Leave(object sender, EventArgs e)
+        {
+            if (hoursTB.Texts == "")
+            {
+                hoursTB.Texts = "Hours (number)";
+            }
+        }
+
+        private void dateTB_Leave(object sender, EventArgs e)
+        {
+            if (dateTB.Texts == "")
+            {
+                dateTB.Texts = "mm/dd/yyyy";
+            }
+        }
+
+        private void shiftTB_Leave(object sender, EventArgs e)
+        {
+            if (shiftTB.Texts == "")
+            {
+                shiftTB.Texts = "Shift";
+            }
         }
     }
 }

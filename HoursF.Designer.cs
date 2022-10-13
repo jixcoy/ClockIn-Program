@@ -29,8 +29,8 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HoursDtb = new System.Windows.Forms.DataGridView();
@@ -62,7 +62,7 @@ namespace ClockIn
             this.panel1.Controls.Add(this.TitleLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 123);
             this.panel1.TabIndex = 1;
@@ -76,23 +76,23 @@ namespace ClockIn
             this.HoursDtb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.HoursDtb.BackgroundColor = System.Drawing.Color.White;
             this.HoursDtb.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.HoursDtb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle6;
             this.HoursDtb.Dock = System.Windows.Forms.DockStyle.Top;
             this.HoursDtb.Location = new System.Drawing.Point(0, 123);
             this.HoursDtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -170,8 +170,10 @@ namespace ClockIn
             this.shiftTB.Name = "shiftTB";
             this.shiftTB.Size = new System.Drawing.Size(279, 31);
             this.shiftTB.TabIndex = 7;
-            this.shiftTB.Texts = "Text";
+            this.shiftTB.Texts = "Shift";
             this.shiftTB.Visible = false;
+            this.shiftTB.Enter += new System.EventHandler(this.shiftTB_Enter);
+            this.shiftTB.Leave += new System.EventHandler(this.shiftTB_Leave);
             // 
             // dateTB
             // 
@@ -180,8 +182,10 @@ namespace ClockIn
             this.dateTB.Name = "dateTB";
             this.dateTB.Size = new System.Drawing.Size(279, 31);
             this.dateTB.TabIndex = 6;
-            this.dateTB.Texts = "Text";
+            this.dateTB.Texts = "mm/dd/yyyy";
             this.dateTB.Visible = false;
+            this.dateTB.Enter += new System.EventHandler(this.dateTB_Enter);
+            this.dateTB.Leave += new System.EventHandler(this.dateTB_Leave);
             // 
             // hoursTB
             // 
@@ -190,8 +194,10 @@ namespace ClockIn
             this.hoursTB.Name = "hoursTB";
             this.hoursTB.Size = new System.Drawing.Size(279, 31);
             this.hoursTB.TabIndex = 5;
-            this.hoursTB.Texts = "Text";
+            this.hoursTB.Texts = "Hours (number)";
             this.hoursTB.Visible = false;
+            this.hoursTB.Enter += new System.EventHandler(this.hoursTB_Enter);
+            this.hoursTB.Leave += new System.EventHandler(this.hoursTB_Leave);
             // 
             // HoursF
             // 
@@ -206,7 +212,7 @@ namespace ClockIn
             this.Controls.Add(this.hoursTB);
             this.Controls.Add(this.HoursDtb);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HoursF";
             this.Size = new System.Drawing.Size(908, 567);
             this.Load += new System.EventHandler(this.HoursF_Load);
