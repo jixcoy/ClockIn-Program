@@ -40,8 +40,8 @@ namespace ClockIn
             hoursTB.Hide();
             dateTB.Hide();
             shiftTB.Hide();
-            cancelBtn.Hide();
-            enterBtn.Hide();
+            CancelButton.Hide();
+            EnterButton.Hide();
 
             hoursTB.Texts = "Hours";
             dateTB.Texts = "Date";
@@ -49,18 +49,33 @@ namespace ClockIn
         }
         private void addHoursBtn_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void enterBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
             hoursTB.Show();
             dateTB.Show();
             shiftTB.Show();
-            cancelBtn.Show();
-            enterBtn.Show();
+            CancelButton.Show();
+            EnterButton.Show();
         }
-        private void cancelBtn_Click(object sender, EventArgs e)
+
+        private void CancelButton_Click(object sender, EventArgs e)
         {
             HideAllAdd();
         }
 
-        private void enterBtn_Click(object sender, EventArgs e)
+        private void EnterButton_Click(object sender, EventArgs e)
         {
             // Creates new employee object and adds to database
             Employee newEmployee = new Employee();

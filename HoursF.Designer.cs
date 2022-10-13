@@ -34,12 +34,12 @@ namespace ClockIn
             this.TitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HoursDtb = new System.Windows.Forms.DataGridView();
-            this.addHoursBtn = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.enterBtn = new System.Windows.Forms.Button();
             this.shiftTB = new ClockIn.CustomTB();
             this.dateTB = new ClockIn.CustomTB();
             this.hoursTB = new ClockIn.CustomTB();
+            this.AddButton = new ClockIn.CustomButton();
+            this.CancelButton = new ClockIn.CustomButton();
+            this.EnterButton = new ClockIn.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoursDtb)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +50,9 @@ namespace ClockIn
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(0, 0);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(681, 100);
+            this.TitleLabel.Size = new System.Drawing.Size(908, 123);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Hours";
             this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,8 +62,9 @@ namespace ClockIn
             this.panel1.Controls.Add(this.TitleLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(681, 100);
+            this.panel1.Size = new System.Drawing.Size(908, 123);
             this.panel1.TabIndex = 1;
             // 
             // HoursDtb
@@ -92,88 +94,121 @@ namespace ClockIn
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle6;
             this.HoursDtb.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HoursDtb.Location = new System.Drawing.Point(0, 100);
-            this.HoursDtb.Margin = new System.Windows.Forms.Padding(2);
+            this.HoursDtb.Location = new System.Drawing.Point(0, 123);
+            this.HoursDtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HoursDtb.Name = "HoursDtb";
             this.HoursDtb.RowHeadersVisible = false;
             this.HoursDtb.RowHeadersWidth = 51;
             this.HoursDtb.RowTemplate.Height = 24;
             this.HoursDtb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.HoursDtb.Size = new System.Drawing.Size(681, 228);
+            this.HoursDtb.Size = new System.Drawing.Size(908, 281);
             this.HoursDtb.TabIndex = 3;
-            // 
-            // addHoursBtn
-            // 
-            this.addHoursBtn.Location = new System.Drawing.Point(301, 347);
-            this.addHoursBtn.Name = "addHoursBtn";
-            this.addHoursBtn.Size = new System.Drawing.Size(75, 23);
-            this.addHoursBtn.TabIndex = 4;
-            this.addHoursBtn.Text = "Add Hours";
-            this.addHoursBtn.UseVisualStyleBackColor = true;
-            this.addHoursBtn.Click += new System.EventHandler(this.addHoursBtn_Click);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Location = new System.Drawing.Point(234, 416);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(100, 23);
-            this.cancelBtn.TabIndex = 8;
-            this.cancelBtn.Text = "Close";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // enterBtn
-            // 
-            this.enterBtn.Location = new System.Drawing.Point(343, 416);
-            this.enterBtn.Name = "enterBtn";
-            this.enterBtn.Size = new System.Drawing.Size(100, 23);
-            this.enterBtn.TabIndex = 9;
-            this.enterBtn.Text = "Enter";
-            this.enterBtn.UseVisualStyleBackColor = true;
-            this.enterBtn.Click += new System.EventHandler(this.enterBtn_Click);
             // 
             // shiftTB
             // 
-            this.shiftTB.Location = new System.Drawing.Point(449, 385);
+            this.shiftTB.Location = new System.Drawing.Point(599, 474);
+            this.shiftTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.shiftTB.Name = "shiftTB";
-            this.shiftTB.Size = new System.Drawing.Size(209, 25);
+            this.shiftTB.Size = new System.Drawing.Size(279, 31);
             this.shiftTB.TabIndex = 7;
             this.shiftTB.Texts = "Text";
             this.shiftTB.Visible = false;
             // 
             // dateTB
             // 
-            this.dateTB.Location = new System.Drawing.Point(234, 385);
+            this.dateTB.Location = new System.Drawing.Point(312, 474);
+            this.dateTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dateTB.Name = "dateTB";
-            this.dateTB.Size = new System.Drawing.Size(209, 25);
+            this.dateTB.Size = new System.Drawing.Size(279, 31);
             this.dateTB.TabIndex = 6;
             this.dateTB.Texts = "Text";
             this.dateTB.Visible = false;
             // 
             // hoursTB
             // 
-            this.hoursTB.Location = new System.Drawing.Point(19, 385);
+            this.hoursTB.Location = new System.Drawing.Point(25, 474);
+            this.hoursTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.hoursTB.Name = "hoursTB";
-            this.hoursTB.Size = new System.Drawing.Size(209, 25);
+            this.hoursTB.Size = new System.Drawing.Size(279, 31);
             this.hoursTB.TabIndex = 5;
             this.hoursTB.Texts = "Text";
             this.hoursTB.Visible = false;
             // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
+            this.AddButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
+            this.AddButton.BorderColor = System.Drawing.Color.Black;
+            this.AddButton.BorderRadius = 15;
+            this.AddButton.BorderSize = 1;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.ForeColor = System.Drawing.Color.White;
+            this.AddButton.Location = new System.Drawing.Point(368, 411);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(150, 40);
+            this.AddButton.TabIndex = 10;
+            this.AddButton.Text = "Add Hours";
+            this.AddButton.TextColor = System.Drawing.Color.White;
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.Maroon;
+            this.CancelButton.BackgroundColor = System.Drawing.Color.Maroon;
+            this.CancelButton.BorderColor = System.Drawing.Color.Black;
+            this.CancelButton.BorderRadius = 15;
+            this.CancelButton.BorderSize = 1;
+            this.CancelButton.FlatAppearance.BorderSize = 0;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(283, 506);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(150, 40);
+            this.CancelButton.TabIndex = 11;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.TextColor = System.Drawing.Color.White;
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Visible = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // EnterButton
+            // 
+            this.EnterButton.BackColor = System.Drawing.Color.Green;
+            this.EnterButton.BackgroundColor = System.Drawing.Color.Green;
+            this.EnterButton.BorderColor = System.Drawing.Color.Black;
+            this.EnterButton.BorderRadius = 15;
+            this.EnterButton.BorderSize = 1;
+            this.EnterButton.FlatAppearance.BorderSize = 0;
+            this.EnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnterButton.ForeColor = System.Drawing.Color.White;
+            this.EnterButton.Location = new System.Drawing.Point(465, 506);
+            this.EnterButton.Name = "EnterButton";
+            this.EnterButton.Size = new System.Drawing.Size(150, 40);
+            this.EnterButton.TabIndex = 12;
+            this.EnterButton.Text = "Enter";
+            this.EnterButton.TextColor = System.Drawing.Color.White;
+            this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Visible = false;
+            // 
             // HoursF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(217)))));
-            this.Controls.Add(this.enterBtn);
-            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.EnterButton);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.shiftTB);
             this.Controls.Add(this.dateTB);
             this.Controls.Add(this.hoursTB);
-            this.Controls.Add(this.addHoursBtn);
             this.Controls.Add(this.HoursDtb);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HoursF";
-            this.Size = new System.Drawing.Size(681, 461);
+            this.Size = new System.Drawing.Size(908, 567);
             this.Load += new System.EventHandler(this.HoursF_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HoursDtb)).EndInit();
@@ -186,11 +221,11 @@ namespace ClockIn
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView HoursDtb;
-        private System.Windows.Forms.Button addHoursBtn;
         private CustomTB hoursTB;
         private CustomTB dateTB;
         private CustomTB shiftTB;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button enterBtn;
+        private CustomButton AddButton;
+        private CustomButton CancelButton;
+        private CustomButton EnterButton;
     }
 }
