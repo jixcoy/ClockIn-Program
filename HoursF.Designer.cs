@@ -29,17 +29,17 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HoursDtb = new System.Windows.Forms.DataGridView();
+            this.EnterButton = new ClockIn.CustomButton();
+            this.CancelButton = new ClockIn.CustomButton();
+            this.AddButton = new ClockIn.CustomButton();
             this.shiftTB = new ClockIn.CustomTB();
             this.dateTB = new ClockIn.CustomTB();
             this.hoursTB = new ClockIn.CustomTB();
-            this.AddButton = new ClockIn.CustomButton();
-            this.CancelButton = new ClockIn.CustomButton();
-            this.EnterButton = new ClockIn.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoursDtb)).BeginInit();
             this.SuspendLayout();
@@ -76,23 +76,23 @@ namespace ClockIn
             this.HoursDtb.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.HoursDtb.BackgroundColor = System.Drawing.Color.White;
             this.HoursDtb.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HoursDtb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.HoursDtb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.HoursDtb.DefaultCellStyle = dataGridViewCellStyle2;
             this.HoursDtb.Dock = System.Windows.Forms.DockStyle.Top;
             this.HoursDtb.Location = new System.Drawing.Point(0, 123);
             this.HoursDtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -103,76 +103,6 @@ namespace ClockIn
             this.HoursDtb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.HoursDtb.Size = new System.Drawing.Size(908, 281);
             this.HoursDtb.TabIndex = 3;
-            // 
-            // shiftTB
-            // 
-            this.shiftTB.Location = new System.Drawing.Point(599, 474);
-            this.shiftTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.shiftTB.Name = "shiftTB";
-            this.shiftTB.Size = new System.Drawing.Size(279, 31);
-            this.shiftTB.TabIndex = 7;
-            this.shiftTB.Texts = "Text";
-            this.shiftTB.Visible = false;
-            // 
-            // dateTB
-            // 
-            this.dateTB.Location = new System.Drawing.Point(312, 474);
-            this.dateTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.dateTB.Name = "dateTB";
-            this.dateTB.Size = new System.Drawing.Size(279, 31);
-            this.dateTB.TabIndex = 6;
-            this.dateTB.Texts = "Text";
-            this.dateTB.Visible = false;
-            // 
-            // hoursTB
-            // 
-            this.hoursTB.Location = new System.Drawing.Point(25, 474);
-            this.hoursTB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.hoursTB.Name = "hoursTB";
-            this.hoursTB.Size = new System.Drawing.Size(279, 31);
-            this.hoursTB.TabIndex = 5;
-            this.hoursTB.Texts = "Text";
-            this.hoursTB.Visible = false;
-            // 
-            // AddButton
-            // 
-            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.AddButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
-            this.AddButton.BorderColor = System.Drawing.Color.Black;
-            this.AddButton.BorderRadius = 15;
-            this.AddButton.BorderSize = 1;
-            this.AddButton.FlatAppearance.BorderSize = 0;
-            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(368, 411);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(150, 40);
-            this.AddButton.TabIndex = 10;
-            this.AddButton.Text = "Add Hours";
-            this.AddButton.TextColor = System.Drawing.Color.White;
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // CancelButton
-            // 
-            this.CancelButton.BackColor = System.Drawing.Color.Maroon;
-            this.CancelButton.BackgroundColor = System.Drawing.Color.Maroon;
-            this.CancelButton.BorderColor = System.Drawing.Color.Black;
-            this.CancelButton.BorderRadius = 15;
-            this.CancelButton.BorderSize = 1;
-            this.CancelButton.FlatAppearance.BorderSize = 0;
-            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelButton.ForeColor = System.Drawing.Color.White;
-            this.CancelButton.Location = new System.Drawing.Point(283, 506);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(150, 40);
-            this.CancelButton.TabIndex = 11;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.TextColor = System.Drawing.Color.White;
-            this.CancelButton.UseVisualStyleBackColor = false;
-            this.CancelButton.Visible = false;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // EnterButton
             // 
@@ -192,6 +122,76 @@ namespace ClockIn
             this.EnterButton.TextColor = System.Drawing.Color.White;
             this.EnterButton.UseVisualStyleBackColor = false;
             this.EnterButton.Visible = false;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.BackColor = System.Drawing.Color.Maroon;
+            this.CancelButton.BackgroundColor = System.Drawing.Color.Maroon;
+            this.CancelButton.BorderColor = System.Drawing.Color.Black;
+            this.CancelButton.BorderRadius = 15;
+            this.CancelButton.BorderSize = 1;
+            this.CancelButton.FlatAppearance.BorderSize = 0;
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelButton.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(297, 506);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(150, 40);
+            this.CancelButton.TabIndex = 11;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.TextColor = System.Drawing.Color.White;
+            this.CancelButton.UseVisualStyleBackColor = false;
+            this.CancelButton.Visible = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
+            this.AddButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(89)))));
+            this.AddButton.BorderColor = System.Drawing.Color.Black;
+            this.AddButton.BorderRadius = 15;
+            this.AddButton.BorderSize = 1;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.ForeColor = System.Drawing.Color.White;
+            this.AddButton.Location = new System.Drawing.Point(378, 411);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(150, 40);
+            this.AddButton.TabIndex = 10;
+            this.AddButton.Text = "Add Hours";
+            this.AddButton.TextColor = System.Drawing.Color.White;
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // shiftTB
+            // 
+            this.shiftTB.Location = new System.Drawing.Point(599, 474);
+            this.shiftTB.Margin = new System.Windows.Forms.Padding(5);
+            this.shiftTB.Name = "shiftTB";
+            this.shiftTB.Size = new System.Drawing.Size(279, 31);
+            this.shiftTB.TabIndex = 7;
+            this.shiftTB.Texts = "Text";
+            this.shiftTB.Visible = false;
+            // 
+            // dateTB
+            // 
+            this.dateTB.Location = new System.Drawing.Point(312, 474);
+            this.dateTB.Margin = new System.Windows.Forms.Padding(5);
+            this.dateTB.Name = "dateTB";
+            this.dateTB.Size = new System.Drawing.Size(279, 31);
+            this.dateTB.TabIndex = 6;
+            this.dateTB.Texts = "Text";
+            this.dateTB.Visible = false;
+            // 
+            // hoursTB
+            // 
+            this.hoursTB.Location = new System.Drawing.Point(25, 474);
+            this.hoursTB.Margin = new System.Windows.Forms.Padding(5);
+            this.hoursTB.Name = "hoursTB";
+            this.hoursTB.Size = new System.Drawing.Size(279, 31);
+            this.hoursTB.TabIndex = 5;
+            this.hoursTB.Texts = "Text";
+            this.hoursTB.Visible = false;
             // 
             // HoursF
             // 

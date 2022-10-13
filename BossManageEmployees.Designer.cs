@@ -29,8 +29,8 @@ namespace ClockIn
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ManageEmployeesTitle = new System.Windows.Forms.Panel();
             this.ManageEmployeesLbl = new System.Windows.Forms.Label();
             this.manageEmployeesDTbl = new System.Windows.Forms.DataGridView();
@@ -81,23 +81,23 @@ namespace ClockIn
             this.manageEmployeesDTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.manageEmployeesDTbl.BackgroundColor = System.Drawing.Color.White;
             this.manageEmployeesDTbl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.manageEmployeesDTbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.manageEmployeesDTbl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.manageEmployeesDTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.manageEmployeesDTbl.DefaultCellStyle = dataGridViewCellStyle14;
             this.manageEmployeesDTbl.Dock = System.Windows.Forms.DockStyle.Top;
             this.manageEmployeesDTbl.Location = new System.Drawing.Point(0, 100);
             this.manageEmployeesDTbl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -234,8 +234,10 @@ namespace ClockIn
             this.removeConfirmTb.Name = "removeConfirmTb";
             this.removeConfirmTb.Size = new System.Drawing.Size(228, 31);
             this.removeConfirmTb.TabIndex = 14;
-            this.removeConfirmTb.Texts = "";
+            this.removeConfirmTb.Texts = "Confirm? Yes or No";
             this.removeConfirmTb.Visible = false;
+            this.removeConfirmTb.Enter += new System.EventHandler(this.removeConfirmTb_Enter);
+            this.removeConfirmTb.Leave += new System.EventHandler(this.removeConfirmTb_Leave);
             // 
             // removeNameTb
             // 
@@ -244,8 +246,10 @@ namespace ClockIn
             this.removeNameTb.Name = "removeNameTb";
             this.removeNameTb.Size = new System.Drawing.Size(228, 31);
             this.removeNameTb.TabIndex = 11;
-            this.removeNameTb.Texts = "";
+            this.removeNameTb.Texts = "Full Name";
             this.removeNameTb.Visible = false;
+            this.removeNameTb.Enter += new System.EventHandler(this.removeNameTb_Enter);
+            this.removeNameTb.Leave += new System.EventHandler(this.removeNameTb_Leave);
             // 
             // nidCustomTb
             // 
@@ -254,8 +258,10 @@ namespace ClockIn
             this.nidCustomTb.Name = "nidCustomTb";
             this.nidCustomTb.Size = new System.Drawing.Size(228, 31);
             this.nidCustomTb.TabIndex = 7;
-            this.nidCustomTb.Texts = "";
+            this.nidCustomTb.Texts = "ID";
             this.nidCustomTb.Visible = false;
+            this.nidCustomTb.Enter += new System.EventHandler(this.nidCustomTb_Enter);
+            this.nidCustomTb.Leave += new System.EventHandler(this.nidCustomTb_Leave);
             // 
             // npayCustomTb
             // 
@@ -264,8 +270,10 @@ namespace ClockIn
             this.npayCustomTb.Name = "npayCustomTb";
             this.npayCustomTb.Size = new System.Drawing.Size(228, 31);
             this.npayCustomTb.TabIndex = 6;
-            this.npayCustomTb.Texts = "";
+            this.npayCustomTb.Texts = "Pay";
             this.npayCustomTb.Visible = false;
+            this.npayCustomTb.Enter += new System.EventHandler(this.npayCustomTb_Enter);
+            this.npayCustomTb.Leave += new System.EventHandler(this.npayCustomTb_Leave);
             // 
             // nRoleCustomTB
             // 
@@ -274,18 +282,23 @@ namespace ClockIn
             this.nRoleCustomTB.Name = "nRoleCustomTB";
             this.nRoleCustomTB.Size = new System.Drawing.Size(228, 31);
             this.nRoleCustomTB.TabIndex = 5;
-            this.nRoleCustomTB.Texts = "";
+            this.nRoleCustomTB.Texts = "Role";
             this.nRoleCustomTB.Visible = false;
+            this.nRoleCustomTB.Enter += new System.EventHandler(this.nRoleCustomTB_Enter);
+            this.nRoleCustomTB.Leave += new System.EventHandler(this.nRoleCustomTB_Leave);
             // 
             // nnameCustomTb
             // 
+            this.nnameCustomTb.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.nnameCustomTb.Location = new System.Drawing.Point(10, 458);
             this.nnameCustomTb.Margin = new System.Windows.Forms.Padding(5);
             this.nnameCustomTb.Name = "nnameCustomTb";
             this.nnameCustomTb.Size = new System.Drawing.Size(228, 31);
             this.nnameCustomTb.TabIndex = 3;
-            this.nnameCustomTb.Texts = "";
+            this.nnameCustomTb.Texts = "Full Name";
             this.nnameCustomTb.Visible = false;
+            this.nnameCustomTb.Enter += new System.EventHandler(this.nnameCustomTb_Enter);
+            this.nnameCustomTb.Leave += new System.EventHandler(this.nnameCustomTb_Leave);
             // 
             // BossManageEmployees
             // 

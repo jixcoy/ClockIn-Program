@@ -65,13 +65,9 @@ namespace ClockIn
         {
             // Shows all Employee add buttons and Textboxes
             nnameCustomTb.Show();
-            nnameCustomTb.Texts = "Name";
             nidCustomTb.Show();
-            nidCustomTb.Texts = "ID";
             npayCustomTb.Show();
-            npayCustomTb.Texts = "Pay";
             nRoleCustomTB.Show();
-            nRoleCustomTB.Texts = "Role";
             CancelButton.Show();
             EnterButton.Show();
         }
@@ -130,6 +126,106 @@ namespace ClockIn
             REnterBtn.Show();
             removeNameTb.Show();
             removeConfirmTb.Show();
+        }
+
+        // Place Holder Texts Enter
+        private void nnameCustomTb_Enter(object sender, EventArgs e)
+        {
+            if (nnameCustomTb.Texts == "Full Name")
+            {
+                nnameCustomTb.Texts = "";
+            }
+        }
+
+        private void npayCustomTb_Enter(object sender, EventArgs e)
+        {
+            if (npayCustomTb.Texts == "Pay")
+            {
+                npayCustomTb.Texts = "";
+            }
+        }
+
+        private void nidCustomTb_Enter(object sender, EventArgs e)
+        {
+            if (nidCustomTb.Texts == "ID")
+            {
+                nidCustomTb.Texts = "";
+            }
+        }
+
+        private void nRoleCustomTB_Enter(object sender, EventArgs e)
+        {
+            if (nRoleCustomTB.Texts == "Role")
+            {
+                nRoleCustomTB.Texts = "";
+            }
+        }
+
+        private void removeNameTb_Enter(object sender, EventArgs e)
+        {
+            if (removeNameTb.Texts == "Full Name")
+            {
+                removeNameTb.Texts = "";
+            }
+        }
+
+        private void removeConfirmTb_Enter(object sender, EventArgs e)
+        {
+            if (removeConfirmTb.Texts == "Confirm? Yes or No")
+            {
+                removeConfirmTb.Texts = "";
+            }
+        }
+
+
+        // Placeholder Text Leave
+
+        private void nnameCustomTb_Leave(object sender, EventArgs e)
+        {
+            if (nnameCustomTb.Texts == "")
+            {
+                nnameCustomTb.Texts = "Full Name";
+            }
+        }
+
+        private void npayCustomTb_Leave(object sender, EventArgs e)
+        {
+            if (npayCustomTb.Texts == "")
+            {
+                npayCustomTb.Texts = "Pay";
+            }
+        }
+
+        private void nidCustomTb_Leave(object sender, EventArgs e)
+        {
+            if (nidCustomTb.Texts == "")
+            {
+                nidCustomTb.Texts = "ID";
+            }
+        }
+
+        private void nRoleCustomTB_Leave(object sender, EventArgs e)
+        {
+            if (nRoleCustomTB.Texts == "")
+            {
+                nRoleCustomTB.Texts = "Role";
+            }
+        }
+
+        private void removeNameTb_Leave(object sender, EventArgs e)
+        {
+            if (removeNameTb.Texts == "")
+            {
+                removeNameTb.Texts = "Full Name";
+            }
+        }
+
+        private void removeConfirmTb_Leave(object sender, EventArgs e)
+        {
+            if (removeConfirmTb.Texts == "")
+            {
+                removeConfirmTb.Texts = "Confirm? Yes or No";
+            }
         }
     }
 }
